@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+  }
+  body{
+    text-align: center;
+    background-color: rgb(59, 59, 57);
+  }
+/* Landing page image */
+/* The main div holding everything with hero image needed for zoom effect, code got from Love running video*/
+#landingPage {
+    height: auto;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+  }
+  /* Hero image styling, giving a responsive design */
+  #firstP img {
+    height: auto;
+    width:80%;
+    background-position: top center;
+  
+    /*Creates zoom effect for hero, code from running loving video */
+    animation-name:hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+  }
+  
+  /* Create a zoom effect for hero image, code from loving running video*/
+  
+  @keyframes hero-zoom {
+    from{
+      transform: scale(1);
+    }
+    to{
+      transform: scale(1.1);
+    }
+  }
