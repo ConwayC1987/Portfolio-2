@@ -8,13 +8,13 @@ function hidePage() {
 }
 
 // Get the modal
-var modal = document.getElementById("myModal");
+let modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("rules");
+let btn = document.getElementById("rules");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
@@ -37,8 +37,15 @@ window.onclick = function(event) {
   }
 }
 
-var playB = document.getElementById("play");
+let playB = document.getElementById("play");
+let qImg = document.getElementById("qImg");
+let qImg1 = document.getElementById("qImg1");
+let option1 = document.getElementById("option1");
+let option2 = document.getElementById("option2");
+
+
 
 playB.onclick = function() {
+  
 
 }
