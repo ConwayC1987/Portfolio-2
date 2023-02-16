@@ -60,8 +60,10 @@ let questions = [
     option1 : "Tom Hanks",
     option2 : "Liam Neeson",
     correct : "option2"
-},
+}
 ];
+
+let currentQ = 0;
 
 function makeQuestion(){
   let ques = questions[currentQ];
