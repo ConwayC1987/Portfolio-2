@@ -43,7 +43,33 @@ let qImg1 = document.getElementById("qImg1");
 let option1 = document.getElementById("option1");
 let option2 = document.getElementById("option2");
 
+let questions = [
+  {
+      question : "Who is the oldest?",
+      imgSrc : "assets/images/tom_hanks.jpg",
+      imgSrc1 : "assets/images/liam_Neeson.jpg",
+      option1 : "Tom Hanks",
+      option2 : "Liam Neeson",
+      correct : "option2"
+  },
+  {
+    question : "Who is the oldest?",
+    imgSrc : "assets/images/tom_hanks.jpg",
+    imgSrc1 : "assets/images/liam_Neeson.jpg",
+    option1 : "Tom Hanks",
+    option2 : "Liam Neeson",
+    correct : "option2"
+},
+]
 
+function makeQuestion(){
+  let ques = questions[currentQ];
+  question.innerHTML = "<p>"+ ques.question +"</p>";
+  qImg.innerHTML = "<img src="+ ques.imgSrc +">";
+  qImg1.innerHTML = "<img src="+ ques.imgSrc1 +">";
+  option1.innerHTML = ques.option1;
+  option2.innerHTML = ques.option2;
+}
 
 playB.onclick = function() {
   
