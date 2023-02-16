@@ -38,18 +38,46 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <span class="close">&times;</span>
-                        <h2>Modal Header</h2>
+                        <h2 id="prize"></h2>
                     </div>
                     <div class="modal-body">
-                        <p>Some text in the Modal Body</p>
-                        <p>Some other text...</p>
+                        <h2 id="rule1"></h2>
+                        <h2 id="rule2"></h2>
                     </div>
                     <div class="modal-footer">
-                        <h3>Modal Footer</h3>
+                        <h3 id="message"></h3>
+                        <button id="play">Play now</button>
                     </div>
                 </div>
             </div>
         </div>
+
+        <section id="gameArea">
+            <div id="showGame">
+                <div id="question"></div>
+                <div class="questions_box">
+                    <div class="option-left">
+                        <div class="card_left">
+                            <div id="qImg"></div>
+                            <div class="options">
+                                <div id="option1" onclick="checkAnswer('option1')"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="option-right">
+                        <div class="card_right">
+                            <div id="qImg1"></div>
+                            <div class="options">
+                                <div id="option2" onclick="checkAnswer('option2')"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="timer"></div>
+                </div>
+                <div class="correct_Answer"></div>
+            </div>
+        </section>
 
         
     </main>

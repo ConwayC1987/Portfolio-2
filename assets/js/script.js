@@ -19,6 +19,10 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
+  document.getElementById("prize").innerHTML = "1st person at the table with all question correct gets a free drink";
+  document.getElementById("rule1").innerHTML = "No use of the internet";
+  document.getElementById("rule2").innerHTML = "No looking at others answers";
+  document.getElementById("message").innerHTML = "GOOD LUCK";
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -31,4 +35,10 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+
+var playB = document.getElementById("play");
+
+playB.onclick = function() {
+
 }
