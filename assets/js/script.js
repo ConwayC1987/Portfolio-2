@@ -3,13 +3,15 @@ const element = document.getElementById("begin");
 element.addEventListener("click", hidePage);
 function hidePage() {
   document.getElementById("landingPage").style.display="none";
+  document.getElementById("rulesPage").style.display="block";
+  document.getElementById("secondP").style.display="block";
 }
 
 // Get the modal
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("rules");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];

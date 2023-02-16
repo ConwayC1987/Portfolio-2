@@ -40,6 +40,34 @@
     }
   }
 
+    #rulesPage{
+      display:none;
+    }
+    /* Hero image styling, giving a responsive design */
+    #secondPage img {
+      display: none;
+      height: auto;
+      width:80%;
+      box-shadow: 0px 0px 10px 10px rgb(200, 1, 1);
+    
+      /*Creates zoom effect for hero, code from running loving video */
+      animation-name:hero-zoom;
+      animation-duration: 5s;
+      animation-fill-mode: forwards;
+    }
+    
+    /* Create a zoom effect for hero image, code from loving running video*/
+    
+    @keyframes hero-zoom {
+      from{
+        transform: scale(1);
+      }
+      to{
+        transform: scale(1.1);
+      }
+    }
+  
+
   /* Code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_button_on_image*/
   /* First page styling of the button */
   #landingPage {
@@ -66,8 +94,38 @@
   #landingPage #begin:hover {
     background-color: black;
   }
+
+  #rulesPage #rules:hover {
+    background-color: black;
+  }
+
+  #rulesPage {
+    position: relative;
+    width: 100%;
+  }
+   /* Centers the button to the middle of the image */
+  #rulesPage #rules {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #cf6161e6;
+    color: white;
+    font-size: 20px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  #landingPage #begin:hover {
+    background-color: black;
+  }
  /* Create a zoom effect for hero image, code from loving running video*/
 
+ 
    /* ---------------------------------------------------------------- */
 
    /* The Modal (background) */
