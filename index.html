@@ -54,13 +54,16 @@
 
         <section id="gameArea">
             <div id="showGame">
-                <div id="question"></div>
+                <h2 id="question"></h2>
+                <div id="clock">
+                    <span id="seconds">10</span>
+                </div>
                 <div class="questions_box">
                     <div class="option-left">
                         <div class="card_left">
                             <div id="qImg"></div>
                             <div class="options">
-                                <div id="option1" onclick="checkAnswer('option1')"></div>
+                                <div id="option1"></div>
                             </div>
                         </div>
                     </div>
@@ -69,11 +72,10 @@
                         <div class="card_right">
                             <div id="qImg1"></div>
                             <div class="options">
-                                <div id="option2" onclick="checkAnswer('option2')"></div>
+                                <div id="option2"></div>
                             </div>
                         </div>
                     </div>
-                    <div id="timer"></div>
                 </div>
                 <div class="correct_Answer"></div>
             </div>

@@ -186,15 +186,15 @@
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
+  background-color: #d37b75;
+  color: black;
 }
 
 .modal-body {padding: 2px 16px;}
 
 .modal-footer {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: #d37b75;
   color: white;
 }
 
@@ -263,4 +263,22 @@ img {
   border : 2px solid rgb(245, 244, 244);
   font-weight: bold;
   background-color: whitesmoke;
+}
+
+#clock {
+  display: none;
+	width: 100px;
+	height: 100px;
+	border-radius: 60%;
+	background-color: lightgrey;
+	margin: auto;
+}
+
+span {
+	display: block;
+	width: 100%;
+	margin: auto;
+	padding-top: 1px;
+	text-align: center;
+	font-size: 80px;
 }

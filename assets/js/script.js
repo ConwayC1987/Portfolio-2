@@ -1,4 +1,4 @@
-// Function for hiding som page content after being clicked. //
+// Function for hiding some page content after being clicked. //
 const element = document.getElementById("begin");
 element.addEventListener("click", hidePage);
 function hidePage() {
@@ -19,7 +19,7 @@ let span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
-  document.getElementById("prize").innerHTML = "1st person at the table with all question correct gets a free drink";
+  document.getElementById("prize").innerHTML = "First person at the table with all question correct gets one free drink";
   document.getElementById("rule1").innerHTML = "No use of the internet";
   document.getElementById("rule2").innerHTML = "No looking at others answers";
   document.getElementById("message").innerHTML = "GOOD LUCK";
@@ -55,17 +55,17 @@ let questions = [
   },
   {
     question : "Who is the oldest?",
-    imgSrc : "assets/images/tom_hanks.jpg",
-    imgSrc1 : "assets/images/liam_Neeson.jpg",
-    option1 : "Tom Hanks",
-    option2 : "Liam Neeson",
+    imgSrc : "assets/images/arnold_S.jpg",
+    imgSrc1 : "assets/images/syl_S.jpg",
+    option1 : "Arnold Schwarzenegger",
+    option2 : "Sylvester Stallone",
     correct : "option2"
 }
 ];
 
 let currentQ = 0;
 
-function makeQuestion(){
+function makeQuestion() {
   let ques = questions[currentQ];
   question.innerHTML = "<p>"+ ques.question +"</p>";
   qImg.innerHTML = "<img src="+ ques.imgSrc +">";
@@ -74,10 +74,28 @@ function makeQuestion(){
   option2.innerHTML = ques.option2;
 }
 
+function checkAnswer(answer) {
+  if (answer){}
+
+}
+
 playB.onclick = function() {
   modal.style.display = "none";
   rulesPage.style.display = "none";
-  //gameArea.style.display = "block";
+  gameTitle.style.display = "none";
+  clock.style.display = "block";
   makeQuestion();
 
 }
+
+timeLeft = 10;
+
+function countdown() {
+	timeLeft--;
+	document.getElementById("seconds").innerHTML = String( timeLeft );
+	if (timeLeft > 0) {
+		setTimeout(countdown, 1000);
+	}
+};
+
+setTimeout(countdown, 1000);
