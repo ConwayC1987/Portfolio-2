@@ -63,7 +63,14 @@ let questions = [
 }
 ];
 
+let lastQ = questions.length - 1;
 let currentQ = 0;
+let count = 0;
+const qTime = 15; // 10s
+const timeLeft = 150; // 150px
+const timeUnit = timeLeft / qTime;
+let TIMER;
+let score = 0;
 
 function makeQuestion() {
   let ques = questions[currentQ];
@@ -83,20 +90,31 @@ playB.onclick = function() {
   modal.style.display = "none";
   rulesPage.style.display = "none";
   gameTitle.style.display = "none";
-  clock.style.display = "block";
   makeQuestion();
-  countdown();
-
+  makeTimer();
+  TIMER = setInterval(makeTimer,1000); // 1000ms = 1s
 }
 
-timeLeft = 10;
+const counter = document.getElementById("counter");
+const timeGauge = document.getElementById("timeGauge");
+const progress = document.getElementById("progress");
 
-function countdown() {
-	timeLeft--;
-	document.getElementById("seconds").innerHTML = String( timeLeft );
-	if (timeLeft > 0) {
-		setTimeout(countdown, 1000);
-	}
-};
-
-setTimeout(countdown, 1000);
+function makeTimer(){
+  if(count <= qTime){
+      counter.innerHTML = count;
+      timeGauge.style.width = count * timeUnit + "px";
+      count++
+  }else{
+      count = 0;
+      // change progress color to red
+      answerIsWrong();
+      if(currentQ < lastQ){
+          currentQ++;
+          makeQuestion();
+      }else{
+          // end the quiz and show the score
+          clearInterval(TIMER);
+          scoreRender();
+      }
+  }
+}
