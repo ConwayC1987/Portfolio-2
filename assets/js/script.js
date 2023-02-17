@@ -85,6 +85,7 @@ playB.onclick = function() {
   gameTitle.style.display = "none";
   clock.style.display = "block";
   makeQuestion();
+  countdown();
 
 }
 
