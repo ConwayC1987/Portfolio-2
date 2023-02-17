@@ -41,8 +41,9 @@ let playB = document.getElementById("play");
 let question = document.getElementById("question");
 let qImg = document.getElementById("qImg");
 let qImg1 = document.getElementById("qImg1");
-let option1 = document.getElementById("option1");
-let option2 = document.getElementById("option2");
+const option1 = document.getElementById("option1");
+const option2 = document.getElementById("option2");
+
 
 let questions = [
   {
@@ -60,6 +61,70 @@ let questions = [
     option1 : "Arnold Schwarzenegger",
     option2 : "Sylvester Stallone",
     correct : "option2"
+},
+  {
+    question : "Who is the oldest?",
+    imgSrc : "assets/images/kate_Winslet.jpg",
+    imgSrc1 : "assets/images/",
+    option1 : "Kate Winslet",
+    option2 : "Sylvester Stallone",
+    correct : "option2"
+},
+{
+  question : "Who is the oldest?",
+  imgSrc : "assets/images/leo_V.jpg",
+  imgSrc1 : "assets/images/mary_L.jpg",
+  option1 : "Leo Var",
+  option2 : "Mary Lou",
+  correct : "option2"
+},
+{
+  question : "Who is the oldest?",
+  imgSrc : "assets/images/pam_A.jpg",
+  imgSrc1 : "assets/images/syl_S.jpg",
+  option1 : "Pam",
+  option2 : "Sylvester Stallone",
+  correct : "option2"
+},
+{
+  question : "Who is the oldest?",
+  imgSrc : "assets/images/arnold_S.jpg",
+  imgSrc1 : "assets/images/syl_S.jpg",
+  option1 : "Arnold Schwarzenegger",
+  option2 : "Sylvester Stallone",
+  correct : "option2"
+},
+{
+  question : "Who is the oldest?",
+  imgSrc : "assets/images/arnold_S.jpg",
+  imgSrc1 : "assets/images/syl_S.jpg",
+  option1 : "Arnold Schwarzenegger",
+  option2 : "Sylvester Stallone",
+  correct : "option2"
+},
+{
+  question : "Who is the oldest?",
+  imgSrc : "assets/images/arnold_S.jpg",
+  imgSrc1 : "assets/images/syl_S.jpg",
+  option1 : "Arnold Schwarzenegger",
+  option2 : "Sylvester Stallone",
+  correct : "option2"
+},
+{
+  question : "Who is the oldest?",
+  imgSrc : "assets/images/arnold_S.jpg",
+  imgSrc1 : "assets/images/syl_S.jpg",
+  option1 : "Arnold Schwarzenegger",
+  option2 : "Sylvester Stallone",
+  correct : "option2"
+},
+{
+  question : "Who is the oldest?",
+  imgSrc : "assets/images/arnold_S.jpg",
+  imgSrc1 : "assets/images/syl_S.jpg",
+  option1 : "Arnold Schwarzenegger",
+  option2 : "Sylvester Stallone",
+  correct : "option2"
 }
 ];
 
@@ -81,10 +146,38 @@ function makeQuestion() {
   option2.innerHTML = ques.option2;
 }
 
+//option1.addEventListener("click",checkAnswer('option1'));
+//option2.addEventListener("click",checkAnswer('option2'));
+
 function checkAnswer(answer) {
-  if (answer){}
+  if (answer == questions[currentQ].correct){
+    score++;
+    ansCorrect();
+  }else{
+    ansWrong();
+  }
+  count = 0;
+  if(currentQ < lastQ){
+    currentQ++;
+    makeQuestion();
+  }else{
+    clearInterval(TIMER)
+
+  }
 
 }
+
+// answer is correct
+function ansCorrect(){
+  //document.getElementById(currentQ).style.backgroundColor = "green";
+}
+
+// answer is Wrong
+function ansWrong(){
+  //document.getElementById(currentQ).style.backgroundColor = "green";
+}
+
+
 
 playB.onclick = function() {
   modal.style.display = "none";
@@ -107,14 +200,14 @@ function makeTimer(){
   }else{
       count = 0;
       // change progress color to red
-      answerIsWrong();
+      ansWrong();
       if(currentQ < lastQ){
           currentQ++;
           makeQuestion();
       }else{
           // end the quiz and show the score
           clearInterval(TIMER);
-          scoreRender();
+          //scoreRender();
       }
   }
 }
