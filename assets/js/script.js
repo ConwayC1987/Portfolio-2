@@ -81,17 +81,33 @@ let questions = [{
   {
     question: "Who is the oldest?",
     imgSrc: "assets/images/pam_A.jpg",
-    imgSrc1: "assets/images/syl_S.jpg",
-    option1: "Pam",
-    option2: "Sylvester Stallone",
-    correct: "option2"
+    imgSrc1: "assets/images/mary_L.jpg",
+    option1: "Pam Anderson",
+    option2: "Mary Lou",
+    correct: "option1"
   },
   {
-    question: "Who is the youngest?",
+    question: "Who is richer?",
     imgSrc: "assets/images/arnold_S.jpg",
     imgSrc1: "assets/images/syl_S.jpg",
     option1: "Arnold Schwarzenegger",
     option2: "Sylvester Stallone",
+    correct: "option1"
+  },
+  {
+    question: "Who is the oldest?",
+    imgSrc: "assets/images/arnold_S.jpg",
+    imgSrc1: "assets/images/syl_S.jpg",
+    option1: "Arnold Schwarzenegger",
+    option2: "Sylvester Stallone",
+    correct: "option2"
+  },
+  {
+    question: "Who is has scored more goals?",
+    imgSrc: "assets/images/messi.jpg",
+    imgSrc1: "assets/images/ronaldo.jpg",
+    option1: "Lionel Messi",
+    option2: "Cristiano Ronaldo",
     correct: "option2"
   },
   {
@@ -106,25 +122,9 @@ let questions = [{
     question: "Who is the youngest?",
     imgSrc: "assets/images/messi.jpg",
     imgSrc1: "assets/images/ronaldo.jpg",
-    option1: "Arnold Schwarzenegger",
-    option2: "Sylvester Stallone",
-    correct: "option2"
-  },
-  {
-    question: "Who is the oldest?",
-    imgSrc: "assets/images/arnold_S.jpg",
-    imgSrc1: "assets/images/syl_S.jpg",
-    option1: "Arnold Schwarzenegger",
-    option2: "Sylvester Stallone",
-    correct: "option2"
-  },
-  {
-    question: "Who is the youngest?",
-    imgSrc: "assets/images/messi.jpg",
-    imgSrc1: "assets/images/ronaldo.jpg",
-    option1: "Arnold Schwarzenegger",
-    option2: "Sylvester Stallone",
-    correct: "option2"
+    option1: "Lionel Messi",
+    option2: "Cristiano Ronaldo",
+    correct: "option1"
   }
 ];
 
