@@ -63,12 +63,12 @@ let questions = [{
     correct: "option2"
   },
   {
-    question: "Who is the oldest?",
+    question: "Who is the younger?",
     imgSrc: "assets/images/kate_Winslet.jpg",
-    imgSrc1: "assets/images/",
+    imgSrc1: "assets/images/pam_A.jpg",
     option1: "Kate Winslet",
-    option2: "Sylvester Stallone",
-    correct: "option2"
+    option2: "Pam Anderson",
+    correct: "option1"
   },
   {
     question: "Who is the youngest?",
@@ -76,7 +76,7 @@ let questions = [{
     imgSrc1: "assets/images/mary_L.jpg",
     option1: "Leo Var",
     option2: "Mary Lou",
-    correct: "option2"
+    correct: "option1"
   },
   {
     question: "Who is the oldest?",
@@ -104,8 +104,8 @@ let questions = [{
   },
   {
     question: "Who is the youngest?",
-    imgSrc: "assets/images/arnold_S.jpg",
-    imgSrc1: "assets/images/syl_S.jpg",
+    imgSrc: "assets/images/messi.jpg",
+    imgSrc1: "assets/images/ronaldo.jpg",
     option1: "Arnold Schwarzenegger",
     option2: "Sylvester Stallone",
     correct: "option2"
@@ -120,8 +120,8 @@ let questions = [{
   },
   {
     question: "Who is the youngest?",
-    imgSrc: "assets/images/arnold_S.jpg",
-    imgSrc1: "assets/images/syl_S.jpg",
+    imgSrc: "assets/images/messi.jpg",
+    imgSrc1: "assets/images/ronaldo.jpg",
     option1: "Arnold Schwarzenegger",
     option2: "Sylvester Stallone",
     correct: "option2"
@@ -225,7 +225,7 @@ function makeTimer() {
 
 // score render
 function scoreRender(){
-    scoreDiv.style.display = "block";
+   // scoreDiv.style.display = "block";
     
     // calculate the amount of question percent answered by the user
     const scorePerCent = Math.round(100 * score/questions.length);

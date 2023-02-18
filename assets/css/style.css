@@ -17,6 +17,11 @@
     overflow: hidden;
     position: relative;
   }
+
+  #gameTitle{
+    font-size: 30px;
+    color:#d37b75;
+  }
   /* Hero image styling, giving a responsive design */
   #firstP img {
     height: auto;
@@ -92,11 +97,11 @@
   }
   
   #landingPage #begin:hover {
-    background-color: rgb(238, 235, 235);
+    background-color: rgb(71, 67, 67);
   }
 
   #rulesPage #rules:hover {
-    background-color: rgb(238, 235, 235);
+    background-color: rgb(71, 67, 67);
   }
 
   #rulesPage {
@@ -150,7 +155,7 @@
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 80%;
+  width: 60%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
@@ -203,6 +208,10 @@
   flex-direction: row;
 }
 
+#timer{
+  text-align: center;
+}
+
 #gameArea{
   display:none;
 }
@@ -227,13 +236,6 @@
   flex: 50%;
 }
 
-.correct_Answer {
-  background-color: #0f1cc68d;
-  padding: 10px;
-  flex: 100%;  
-  font-size: 20px;
-  text-align: center;
-}
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
 @media (max-width: 800px) {
@@ -289,7 +291,7 @@ img {
 #timeGauge{
   background-color: rgb(210, 46, 46);
   margin-top : 5px;
-  margin-left : 20px;
+  margin-left : 175px;
   height : 15px;
   border-radius: 15px;
 }
