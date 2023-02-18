@@ -92,11 +92,11 @@
   }
   
   #landingPage #begin:hover {
-    background-color: black;
+    background-color: rgb(238, 235, 235);
   }
 
   #rulesPage #rules:hover {
-    background-color: black;
+    background-color: rgb(238, 235, 235);
   }
 
   #rulesPage {
@@ -203,6 +203,10 @@
   flex-direction: row;
 }
 
+#gameArea{
+  display:none;
+}
+
 .questions_box {
   display: flex;
   flex-direction: row;
@@ -223,11 +227,11 @@
   flex: 50%;
 }
 
-.answer_option {
+.correct_Answer {
   background-color: #0f1cc68d;
   padding: 10px;
   flex: 100%;  
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -274,11 +278,32 @@ img {
   border : 2px solid rgb(245, 244, 244);
   font-weight: bold;
   background-color: whitesmoke;
+  font-size: 25px;
 }
-
-
 
 #gameTop{
   display: inline-block;
   vertical-align: middle;
+}
+
+#timeGauge{
+  background-color: rgb(210, 46, 46);
+  margin-top : 5px;
+  margin-left : 20px;
+  height : 15px;
+  border-radius: 15px;
+}
+#progress{
+  width : 500px;
+  padding:5px;
+  text-align: center;
+}
+.prog{
+  width : 25px;
+  height : 25px;
+  border: 1px solid #e2dddd;
+  display: inline-block;
+  border-radius: 50%;
+  margin-left : 5px;
+  margin-right : 5px;
 }
