@@ -23,13 +23,15 @@
 
   #gameTitle{
     font-size: 30px;
-    color:rgb(200, 1, 1);
+    color: white;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
   }
   /* Hero image styling, giving a responsive design */
   #firstP img {
     height: auto;
     width:80%;
-    box-shadow: 0px 0px 10px 10px rgb(200, 1, 1);
+    box-shadow: 0px 0px 10px 10px #3b51ab;
   
     /*Creates zoom effect for hero, code from running loving video */
     animation-name:hero-zoom;
@@ -52,7 +54,7 @@
     #secondP img {
       height: auto;
       width:80%;
-      box-shadow: 0px 0px 10px 10px rgb(200, 1, 1);
+      box-shadow: 0px 0px 10px 10px #3b51ab;
     
       /*Creates zoom effect for hero, code from running loving video */
       animation-name:hero-zoom;
@@ -85,7 +87,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: rgb(200, 1, 1);
+    background-color: #3b51ab;
     color: white;
     font-size: 20px;
     padding: 12px 24px;
@@ -106,6 +108,7 @@
   #rulesPage {
     position: relative;
     width: 100%;
+    display:none;
   }
    /* Centers the button to the middle of the image */
   #rulesPage #rules {
@@ -114,7 +117,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: rgb(200, 1, 1);
+    background-color: #3b51ab;
     color: white;
     font-size: 20px;
     padding: 12px 24px;
@@ -129,7 +132,7 @@
   }
  /* */
  #rulesPage #play{
-  background-color: rgb(200, 1, 1);
+  background-color: #3b51ab;
   color: white;
   font-size: 20px;
   padding: 12px 24px;
@@ -202,7 +205,7 @@
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #d37b75;
+  background-color: #3b51ab;
   color: rgb(244, 239, 239);
 }
 
@@ -210,7 +213,7 @@
 
 .modal-footer {
   padding: 2px 16px;
-  background-color: #d37b75;
+  background-color: #3b51ab;
   color: white;
 }
 
@@ -219,14 +222,28 @@
   flex-direction: row;
 }
 
+#counter{
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #201c1c;
+  text-align: center;
+  background: whitesmoke;
+  margin-left : 220px;
+}
+
 #timer{
   text-align: center;
+  color:black;
+  padding-top: 2%;
 }
 
 #gameArea{
   display:none;
-  border-left: 120px solid #de4d4d;
-  border-right: 120px solid #de4d4d;
+  border-left: 250px solid #3b51ab;
+  border-right: 250px solid #3b51ab;
 }
 
 .questions_box {
@@ -248,6 +265,14 @@
   flex: 40%;
 }
 
+#question {
+  color:white;
+  border:2px solid #3b51ab;
+  border-left: 240px solid #3b51ab;
+  border-right: 240px solid #3b51ab;
+  padding: 20px;
+}
+
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
 @media (max-width: 800px) {
@@ -263,27 +288,22 @@
 
 .card_right {
   box-shadow: 0 4px 12px 0 rgba(245, 242, 242, 0.9);
-  width: 45%;
+  width: 320px;
   border-radius: 5px;
 }
 
 .card_left{
   box-shadow: 0 4px 12px 0 rgba(245, 242, 242, 0.9);
-  width: 45%;
+  width: 320px;
   border-radius: 5px;
   float: right;
 }
 
 img {
-  border-radius: 9px 9px 0 0;
+  border-radius: 9px 9px 9px 9px;
 }
 
-#qImg img{
-  width: 200px;
-  height:auto;
-}
-
-#qImg1 img{
+#qImg img, #qImg1 img{
   width: 200px;
   height:auto;
 }
@@ -319,11 +339,11 @@ img {
   text-align: center;
 }
 .prog{
-  width : 25px;
-  height : 25px;
-  border: 1px solid #e2dddd;
+  width : 20px;
+  height : 20px;
+  border: 2px solid #e2dddd;
   display: inline-block;
   border-radius: 50%;
-  margin-left : 5px;
-  margin-right : 5px;
+  margin-left : 2px;
+  margin-right : 2px;
 }

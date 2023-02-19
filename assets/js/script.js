@@ -4,7 +4,7 @@ element.addEventListener("click", hidePage);
 const myTimeout = setTimeout(hidePage, 5000);
 function hidePage() {
   document.getElementById("landingPage").style.display = "none";
-  document.getElementById("secondP").style.display = "block";
+  rulesPage.style.display = "block";
 }
 
 // Get the modal
@@ -124,6 +124,86 @@ let questions = [{
     option1: "Lionel Messi",
     option2: "Cristiano Ronaldo",
     correct: "option1"
+  },
+  {
+    question: "Who is the oldest?",
+    imgSrc: "assets/images/arnold_S.jpg",
+    imgSrc1: "assets/images/syl_S.jpg",
+    option1: "Arnold Schwarzenegger",
+    option2: "Sylvester Stallone",
+    correct: "option2"
+  },
+  {
+    question: "Who is the youngest?",
+    imgSrc: "assets/images/messi.jpg",
+    imgSrc1: "assets/images/ronaldo.jpg",
+    option1: "Lionel Messi",
+    option2: "Cristiano Ronaldo",
+    correct: "option1"
+  },
+  {
+    question: "Who is the oldest?",
+    imgSrc: "assets/images/arnold_S.jpg",
+    imgSrc1: "assets/images/syl_S.jpg",
+    option1: "Arnold Schwarzenegger",
+    option2: "Sylvester Stallone",
+    correct: "option2"
+  },
+  {
+    question: "Who is the youngest?",
+    imgSrc: "assets/images/messi.jpg",
+    imgSrc1: "assets/images/ronaldo.jpg",
+    option1: "Lionel Messi",
+    option2: "Cristiano Ronaldo",
+    correct: "option1"
+  },
+  {
+    question: "Who is the oldest?",
+    imgSrc: "assets/images/arnold_S.jpg",
+    imgSrc1: "assets/images/syl_S.jpg",
+    option1: "Arnold Schwarzenegger",
+    option2: "Sylvester Stallone",
+    correct: "option2"
+  },
+  {
+    question: "Who is the youngest?",
+    imgSrc: "assets/images/messi.jpg",
+    imgSrc1: "assets/images/ronaldo.jpg",
+    option1: "Lionel Messi",
+    option2: "Cristiano Ronaldo",
+    correct: "option1"
+  },
+  {
+    question: "Who is the oldest?",
+    imgSrc: "assets/images/arnold_S.jpg",
+    imgSrc1: "assets/images/syl_S.jpg",
+    option1: "Arnold Schwarzenegger",
+    option2: "Sylvester Stallone",
+    correct: "option2"
+  },
+  {
+    question: "Who is the youngest?",
+    imgSrc: "assets/images/messi.jpg",
+    imgSrc1: "assets/images/ronaldo.jpg",
+    option1: "Lionel Messi",
+    option2: "Cristiano Ronaldo",
+    correct: "option1"
+  },
+  {
+    question: "Who is the oldest?",
+    imgSrc: "assets/images/arnold_S.jpg",
+    imgSrc1: "assets/images/syl_S.jpg",
+    option1: "Arnold Schwarzenegger",
+    option2: "Sylvester Stallone",
+    correct: "option2"
+  },
+  {
+    question: "Who is the youngest?",
+    imgSrc: "assets/images/messi.jpg",
+    imgSrc1: "assets/images/ronaldo.jpg",
+    option1: "Lionel Messi",
+    option2: "Cristiano Ronaldo",
+    correct: "option1"
   }
 ];
 
@@ -133,7 +213,7 @@ let count = 0;
 const qTime = 10; // 10s
 const timeLeft = 150; // 150px
 const timeUnit = timeLeft / qTime;
-let TIMER;
+let TIMER= "";
 let score = 0;
 
 function makeQuestion() {
