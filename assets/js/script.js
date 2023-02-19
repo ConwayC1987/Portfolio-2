@@ -4,8 +4,6 @@ element.addEventListener("click", hidePage);
 const myTimeout = setTimeout(hidePage, 5000);
 function hidePage() {
   document.getElementById("landingPage").style.display = "none";
-  document.getElementById("rulesPage").style.display = "block";
-  document.getElementById("secondP").style.display = "block";
   document.getElementById("secondP").style.display = "block";
 }
 

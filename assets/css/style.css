@@ -48,9 +48,6 @@
     }
   }
 
-    #rulesPage{
-      display:none;
-    }
     /* Hero image styling, giving a responsive design */
     #secondP img {
       height: auto;
@@ -241,14 +238,14 @@
 .option-left {
   background-color: #0f1cc68d;
   padding: 10px;
-  flex: 50%;
+  flex: 40%;
   float: right;
 }
 
 .option-right {
   background-color: #0f1cc68d;
   padding: 10px;
-  flex: 50%;
+  flex: 40%;
 }
 
 
@@ -260,8 +257,10 @@
   #gameArea {
     border-left: 20px;
     border-right: 20px;
-  }
+  } 
 }
+
+
 .card_right {
   box-shadow: 0 4px 12px 0 rgba(245, 242, 242, 0.9);
   width: 45%;
