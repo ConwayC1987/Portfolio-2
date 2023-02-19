@@ -4,10 +4,13 @@
     border: none;
     box-sizing: border-box;
   }
+
+  
   /* Body of the page */
   body{
     text-align: center;
     background-color: rgb(59, 59, 57);
+    font-family: 'Inter', sans-serif;
   }
 /* Landing page image */
 /* The main div holding everything with hero image needed for zoom effect, code got from Love running video*/
@@ -20,7 +23,7 @@
 
   #gameTitle{
     font-size: 30px;
-    color:#d37b75;
+    color:rgb(200, 1, 1);
   }
   /* Hero image styling, giving a responsive design */
   #firstP img {
@@ -85,7 +88,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: #cf6161e6;
+    background-color: rgb(200, 1, 1);
     color: white;
     font-size: 20px;
     padding: 12px 24px;
@@ -114,7 +117,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: #cf6161e6;
+    background-color: rgb(200, 1, 1);
     color: white;
     font-size: 20px;
     padding: 12px 24px;
@@ -127,8 +130,20 @@
   #landingPage #begin:hover {
     background-color: black;
   }
- /* Create a zoom effect for hero image, code from loving running video*/
-
+ /* */
+ #rulesPage #play{
+  background-color: rgb(200, 1, 1);
+  color: white;
+  font-size: 20px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+ }
+ #rulesPage #play:hover {
+  background-color: black;
+}
  
    /* ---------------------------------------------------------------- */
 
@@ -175,9 +190,9 @@
 
 /* The Close Button */
 .close {
-  color: white;
+  color: rgb(246, 240, 240);
   float: right;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -191,7 +206,7 @@
 .modal-header {
   padding: 2px 16px;
   background-color: #d37b75;
-  color: black;
+  color: rgb(244, 239, 239);
 }
 
 .modal-body {padding: 2px 16px;}
@@ -213,12 +228,13 @@
 
 #gameArea{
   display:none;
+  border-left: 120px solid #de4d4d;
+  border-right: 120px solid #de4d4d;
 }
 
 .questions_box {
   display: flex;
   flex-direction: row;
-  font-size: 30px;
   text-align: center;
 }
 
@@ -240,6 +256,10 @@
 @media (max-width: 800px) {
   .questions_box {
     flex-direction: column;
+  }
+  #gameArea {
+    border-left: 20px;
+    border-right: 20px;
   }
 }
 .card_right {
