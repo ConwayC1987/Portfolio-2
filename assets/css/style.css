@@ -132,17 +132,18 @@
   }
  /* */
  #rulesPage #play{
-  background-color: #3b51ab;
-  color: white;
+  background-color: rgb(221, 218, 218);
+  color: black;
   font-size: 20px;
   padding: 12px 24px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
+  font-weight: bolder;
  }
  #rulesPage #play:hover {
-  background-color: black;
+  background-color: rgb(222, 74, 74);
 }
  
    /* ---------------------------------------------------------------- */
@@ -255,14 +256,14 @@
 .option-left {
   background-color: #0f1cc68d;
   padding: 10px;
-  flex: 40%;
+  flex: 50%;
   float: right;
 }
 
 .option-right {
   background-color: #0f1cc68d;
   padding: 10px;
-  flex: 40%;
+  flex: 50%;
 }
 
 #question {
@@ -282,6 +283,7 @@
   #gameArea {
     border-left: 20px;
     border-right: 20px;
+    text-align: center;
   } 
 }
 
@@ -347,3 +349,4 @@ img {
   margin-left : 2px;
   margin-right : 2px;
 }
+

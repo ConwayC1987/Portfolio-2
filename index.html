@@ -39,59 +39,78 @@
 
                 <!-- Modal content -->
                 <div class="modal-content">
+                    <!-- Top of the modal  -->
                     <div class="modal-header">
+                        <!-- Option to close modal  -->
                         <span class="close">&times;</span>
-                        <h2 id="prize"></h2>
+                        <h3 id="prize"></h3>
                     </div>
+                    <!-- Modal content -->
                     <div class="modal-body">
-                        <h2 id="rule1"></h2>
-                        <h2 id="rule2"></h2>
+                        <h3 id="rule1"></h3>
+                        <h3 id="rule2"></h3>
                     </div>
                     <div class="modal-footer">
                         <h3 id="message"></h3>
+                        <!-- The play button to start the game  -->
                         <button id="play">Play now</button>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Game area section  -->
         <section id="gameArea">
-            <div id="showGame">
-                <div id="gameTop">
-                    
-                    <div id="timer">
-                        <div id="counter"></div>
-                        <div id="btimeGauge"></div>
-                        <div id="timeGauge"></div>
-                        <div id="progress"></div>
-                    </div>
+            <!-- Modal content -->
+            <div id="gameTop">
+                <!-- Modal content -->
+                <div id="timer">
+                    <div id="counter"></div>
+                    <div id="btimeGauge"></div>
+                    <div id="timeGauge"></div>
+                    <div id="progress"></div>
                 </div>
-                
-                <div class="questions_box">
-                    <div class="option-left">
-                        <div class="card_left">
-                            <div id="qImg"></div>
-                            <div class="options">
-                                <div id="option1" onclick="checkAnswer('option1')"></div>
-                            </div>
+            </div>
+            <!-- Modal content -->
+            <div class="questions_box">
+                <!-- Modal content -->
+                <div class="option-left">
+                    <!-- Modal content -->
+                    <div class="card_left">
+                        <!-- Modal content -->
+                        <div id="qImg"></div>
+                        <!-- Modal content -->
+                        <div class="options">
+                            <div id="option1" onclick="checkAnswer('option1')"></div>
                         </div>
                     </div>
+                </div>
+                <!-- Modal content -->
+                <div class="option-right">
+                    <!-- Modal content -->
+                    <div class="card_right">
+                        <!-- Modal content -->
+                        <div id="qImg1"></div>
+                        <!-- Modal content -->
+                        <div class="options">
+                            <div id="option2" onclick="checkAnswer('option2')"></div>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="option-right">
-                        <div class="card_right">
-                            <div id="qImg1"></div>
-                            <div class="options">
-                                <div id="option2" onclick="checkAnswer('option2')"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div id="score"></div>
-                <div id="progress"></div>
-                <div id="scoreContainer" style="display: none"></div>
+            </div>
             
             <h2 id="question"></h2>
+            <!-- Modal content -->
+            <section id="results" style="display: none">
+                <div id="score"></div>
+            
+                <div id="scoreContainer" style="display: none"></div>
+            </section>
+            
+            
+
+            
         </section>
 
         
