@@ -1,7 +1,7 @@
 // Function for hiding some page content after being clicked. //
 const element = document.getElementById("begin");
 element.addEventListener("click", hidePage);
-const myTimeout = setTimeout(hidePage, 5000);
+const myTimeout = setTimeout(hidePage, 9000);
 function hidePage() {
   document.getElementById("landingPage").style.display = "none";
   rulesPage.style.display = "block";
