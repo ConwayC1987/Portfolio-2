@@ -17,7 +17,6 @@
     <header>
         <!-- Title of the game -->
         <h1 id="gameTitle">THE PUB QUIZ</h1>
-        <!-- Image for the landing page -->
         <!--LandingPage created to make a zoom effect when opening or refreshing pg on hero image, code from 
         love running video-->
         <div id="landingPage">
@@ -28,7 +27,6 @@
             <!-- Button on the landing page to start  -->
             <button id="begin">Welcome To The Guess Who Quiz</button>
         </div>
-
     </header>
     <main>
         <div id="rulesPage">
@@ -65,37 +63,38 @@
 
         <!-- Game area section  -->
         <section id="gameArea">
-            <!-- Modal content -->
+            <!-- Game top area -->
             <div id="gameTop">
-                <!-- Modal content -->
+                <!-- Clock, time gauge and a  -->
                 <div id="timer">
                     <div id="counter"></div>
                     <div id="btimeGauge"></div>
                     <div id="timeGauge"></div>
+                    <!-- A green or red circle to let the user know if they were right or wrong --> 
                     <div id="progress"></div>
                 </div>
             </div>
-            <!-- Modal content -->
+            <!-- Questions container -->
             <div class="questions_box">
-                <!-- Modal content -->
+                <!-- Left side content -->
                 <div class="option-left">
-                    <!-- Modal content -->
+                    <!-- Left side card -->
                     <div class="card_left">
-                        <!-- Modal content -->
+                        <!-- Question image -->
                         <div id="qImg"></div>
-                        <!-- Modal content -->
+                        <!-- Question text answer option -->
                         <div class="options">
                             <div id="option1" onclick="checkAnswer('option1')"></div>
                         </div>
                     </div>
                 </div>
-                <!-- Modal content -->
+                <!-- Right side content -->
                 <div class="option-right">
-                    <!-- Modal content -->
+                    <!-- Right side card -->
                     <div class="card_right">
-                        <!-- Modal content -->
+                        <!-- Question image -->
                         <div id="qImg1"></div>
-                        <!-- Modal content -->
+                        <!-- Question text answer option -->
                         <div class="options">
                             <div id="option2" onclick="checkAnswer('option2')"></div>
                         </div>
