@@ -304,7 +304,7 @@ function makeTimer() {
 
 // score render
 function scoreRender(){
-   // scoreDiv.style.display = "block";
+    scoreDiv.style.display = "block";
     
     // calculate the amount of question percent answered by the user
     const scorePerCent = Math.round(100 * score/questions.length);
