@@ -287,13 +287,35 @@ function ansWrong() {
   document.getElementById(currentQ).style.backgroundColor = 'red';
 }
 
+function timer(){
+  
+}
+
+(function() {
+  let s = document.getElementById('counter').style,
+      f = false,
+      c1 = 'red',
+      c3 = 'green';
+      c2 = 'white';
+
+  setInterval(function() {
+    s.backgroundColor = c1;
+    if (count <= 5){
+      s.backgroundColor = f ? c3 : c2;
+      f = !f;
+    }
+
+      
+  }, 3000);
+})();
 
 function makeTimer() {
   if (count <= qTime) {
     counter.innerHTML = count;
     timeGauge.style.width = count * timeUnit + "px";
     count++
-  } else {
+  } else if (count <= 2) {counter.style.backgroundColor = "green|transparent|initial|inherit"}
+  else {
     count = 0;
     // change progress color to red
     ansWrong();

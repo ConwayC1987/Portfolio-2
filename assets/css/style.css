@@ -10,7 +10,7 @@
   body{
     text-align: center;
     background-color: rgb(59, 59, 57);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Oswald', sans-serif;
   }
 /* Landing page image */
 /* The main div holding everything with hero image needed for zoom effect, code got from Love running video*/
@@ -250,7 +250,7 @@
   line-height: 60px;
   border-radius: 50%;
   font-size: 30px;
-  color: #201c1c;
+  color: #0c0c0c;
   text-align: center;
   background: whitesmoke;
   margin-left : 220px;
