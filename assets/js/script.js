@@ -1,7 +1,7 @@
 // Function for hiding some page content after being clicked. //
 const element = document.getElementById("begin");
 element.addEventListener("click", hidePage);
-const myTimeout = setTimeout(hidePage, 9900);
+//const myTimeout = setTimeout(hidePage, 9900);
 function hidePage() {
   document.getElementById("landingPage").style.display = "none";
   rulesPage.style.display = "block";
@@ -13,8 +13,9 @@ let modal = document.getElementById("myModal");
 // Get the button that opens the modal
 let btn = document.getElementById("rules");
 
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
+// Get the button that closes the modal
+
+let existM = document.getElementById("exist");
 
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
@@ -25,10 +26,12 @@ btn.onclick = function () {
   document.getElementById("message").innerHTML = "GOOD LUCK";
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+// When the user clicks on the close button it closes the rules
+exist.onclick = function () {
   modal.style.display = "none";
 }
+
+
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
@@ -44,6 +47,7 @@ let qImg1 = document.getElementById("qImg1");
 let option1 = document.getElementById("option1");
 let option2 = document.getElementById("option2");
 
+// Questions for the quiz
 
 let questions = [{
     question: "Who is the oldest?",
@@ -207,6 +211,18 @@ let questions = [{
   }
 ];
 
+// Play button to start quiz
+playB.onclick = function () {
+  modal.style.display = "none";
+  secondP.style.display = "none";
+  gameTitle.style.display = "none";
+  gameArea.style.display = "block";
+  makeQuestion();
+  makeTimer();
+  renderProgress();
+  TIMER = setInterval(makeTimer, 1000); // 1000ms = 1s
+}
+
 let lastQ = questions.length - 1;
 let currentQ = 0;
 let count = 0;
@@ -255,21 +271,11 @@ function checkAnswer(answer) {
     makeQuestion();
   } else {
     clearInterval(TIMER)
-
+    gameArea.style.display = "none";
+    scoreRender();
   }
 }
 
-// Play button to start quiz
-playB.onclick = function () {
-  modal.style.display = "none";
-  rulesPage.style.display = "none";
-  gameTitle.style.display = "none";
-  gameArea.style.display = "block";
-  makeQuestion();
-  makeTimer();
-  renderProgress();
-  TIMER = setInterval(makeTimer, 1000); // 1000ms = 1s
-}
 
 // Answer is Correct
 function ansCorrect() {
@@ -304,7 +310,8 @@ function makeTimer() {
 
 // score render
 function scoreRender(){
-    scoreDiv.style.display = "block";
+    gameArea.style.display = "none";
+    results.style.display = "block";
     
     // calculate the amount of question percent answered by the user
     const scorePerCent = Math.round(100 * score/questions.length);
@@ -316,7 +323,7 @@ function scoreRender(){
               (scorePerCent >= 20) ? "img/2.png" :
               "img/1.png";
     
-    scoreDiv.innerHTML = "<img src="+ img +">";
-    scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
+    //scoreDiv.innerHTML = "<img src="+ img +">";
+    results.innerHTML += "<p>"+ scorePerCent +"%</p>";
 }
 

@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <!-- Website title -->
     <title>Pub Quiz</title>
 </head>
 <!-- Body of page -->
@@ -31,11 +29,11 @@
     <main>
         <div id="rulesPage">
             <!-- Image got from  -->
-            <div id="secondP"><img src="assets/images/funny.jpg" alt="Men on strike looking for beer"></div>
+            <div id="secondP"><img src="assets/images/funny.jpg" alt="Men on strike looking for beer">
             <!-- Code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2 -->
             <!-- Trigger/Open The Modal -->
             <button id="rules">Rules of the Quiz...</button>
-
+            </div>
             <!-- The Modal -->
             <div id="myModal" class="modal">
 
@@ -43,8 +41,6 @@
                 <div class="modal-content">
                     <!-- Top of the modal  -->
                     <div class="modal-header">
-                        <!-- Option to close modal  -->
-                        <span class="close">&times;</span>
                         <h3 id="prize"></h3>
                     </div>
                     <!-- Modal content -->
@@ -55,7 +51,7 @@
                     <div class="modal-footer">
                         <h3 id="message"></h3>
                         <!-- The play button to start the game  -->
-                        <button id="play">Play now</button>
+                        <button id="play">Play</button>
                         <button id="exist">Close</button>
                     </div>
                 </div>
@@ -104,14 +100,15 @@
             <!-- Question -->
             <h2 id="question"></h2>
             <!-- Results content -->
-            <section id="results" style="display: none">
-                <div id="score"></div>
-            
-                <div id="scoreContainer" style="display: none"></div>
-            </section>
+           
             
             
 
+            
+        </section>
+        <section id="results" >
+            <div id="score"></div>
+        
             
         </section>
 
