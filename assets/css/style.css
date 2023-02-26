@@ -245,15 +245,15 @@
 }
 
 #counter{
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   border-radius: 50%;
-  font-size: 30px;
+  font-size: 25px;
   color: #0c0c0c;
   text-align: center;
   background: whitesmoke;
-  margin-left : 160px;
+  margin-left : 130px;
 }
 
 #timer{
@@ -276,14 +276,14 @@
 
 .option-left {
   background-color: #0f1cc68d;
-  padding: 10px;
+  padding: 2px;
   flex: 50%;
   float: right;
 }
 
 .option-right {
   background-color: #0f1cc68d;
-  padding: 10px;
+  padding: 2px;
   flex: 50%;
 }
 
@@ -297,15 +297,32 @@
 
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
-@media (max-width: 500px) {
+@media (max-width: 430px) {
   .questions_box {
     flex-direction: column;
   }
   #gameArea {
-    border-left: 10px;
-    border-right: 10px;
+    border-left: 5px;
+    border-right: 5px;
     text-align: center;
   } 
+  #counter {
+    text-align: center;
+  }
+  .option-left {
+    float:none;
+    padding-right: 15%;
+  }
+  .option-right {
+    float:none;
+    padding-left: 15%;
+  }
+}
+
+@media (max-width: 430px) {
+  .questions_box {
+    flex-direction: column;
+  }
   #counter {
     text-align: center;
   }
@@ -318,28 +335,72 @@
     padding-left: 25%;
   }
 }
-
-@media (max-width: 400px) {
-  .questions_box {
-    flex-direction: column;
+@media (max-width: 415px) {
+  #counter {
+    margin-left : 120px;
   }
-  #gameArea {
-    border-left: 10%;
-    border-right: 10%;
-    text-align: center;
-  } 
+  .option-left {
+    padding-right: 25%;
+  }
+  .option-right {
+    float:none;
+    padding-left: 25%;
+  }
+  #timeGauge{
+    margin-top : 2px;
+    margin-left : 50px;
+  }
+}
+@media (max-width: 390px) {
   #counter {
     text-align: center;
   }
   .option-left {
-    float:none;
-    
-    padding-left: 15%;
+    padding-right: 20%;
   }
   .option-right {
     float:none;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 25%;
+  }
+}
+@media (max-width: 370px) {
+  #counter {
+    text-align: center;
+  }
+  .option-left {
+    padding-right: 18%;
+  }
+  .option-right {
+    float:none;
+    padding-left: 25%;
+  }
+}
+@media (max-width: 352px) {
+  #counter {
+    margin-left : 120px;
+  }
+  .option-left {
+    padding-right: 20%;
+  }
+  .option-right {
+    float:none;
+    padding-left: 20%;
+  }
+}
+@media (max-width: 348px) {
+  #counter {
+    margin-left : 130px;
+  }
+  #timeGauge{
+    margin-top : 2px;
+    margin-left : 0px;
+  }
+  .option-left {
+    padding-right: 18%;
+  }
+  .option-right {
+    float:none;
+    padding-left: 18%;
   }
 }
 
@@ -359,20 +420,20 @@
 @media (max-width: 1176px) {
  
   #gameArea {
-    border-left: 15px solid #3b51ab;
-    border-right: 15px solid #3b51ab;
+    border-left: 0px solid #3b51ab;
+    border-right: 0px solid #3b51ab;
   } 
 }
 
 .card_right {
   box-shadow: 0 4px 12px 0 rgba(245, 242, 242, 0.9);
-  width: 220px;
+  width: 210px;
   border-radius: 5px;
 }
 
 .card_left{
   box-shadow: 0 4px 12px 0 rgba(245, 242, 242, 0.9);
-  width: 220px;
+  width: 210px;
   border-radius: 5px;
   float: right;
 }
@@ -407,7 +468,7 @@ img {
 #timeGauge{
   background-color: rgb(210, 46, 46);
   margin-top : 5px;
-  margin-left : 120px;
+  margin-left : 80px;
   height : 15px;
   border-radius: 15px;
 }
@@ -416,8 +477,8 @@ img {
   text-align: center;
 }
 .prog{
-  width : 20px;
-  height : 20px;
+  width : 18px;
+  height : 18px;
   border: 2px solid #e2dddd;
   display: inline-block;
   border-radius: 50%;

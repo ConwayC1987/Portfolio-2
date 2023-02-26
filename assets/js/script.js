@@ -160,14 +160,6 @@ let questions = [{
     option1: "Lionel Messi",
     option2: "Cristiano Ronaldo",
     correct: "option1"
-  },
-  {
-    question: "Who is the oldest?",
-    imgSrc: "assets/images/arnold_S.jpg",
-    imgSrc1: "assets/images/syl_S.jpg",
-    option1: "Arnold Schwarzenegger",
-    option2: "Sylvester Stallone",
-    correct: "option2"
   }
 ];
 
