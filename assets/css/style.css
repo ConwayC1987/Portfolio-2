@@ -317,8 +317,34 @@
     float:none;
     padding-left: 120px;
   }
-  
 }
+
+@media (max-width: 500px) {
+  .questions_box {
+    flex-direction: column;
+  }
+  #gameArea {
+    border-left: 10px;
+    border-right: 10px;
+    text-align: center;
+  } 
+  #counter {
+    text-align: center;
+  }
+  .option-left {
+    float:none;
+    padding-right: 10%;
+    padding-left: 15%;
+  }
+  .option-right {
+    float:none;
+    padding-left: 15%;
+    padding-right: 10%;
+  }
+}
+
+
+
 @media (max-width: 780px) {
   #question {
     color: white;
