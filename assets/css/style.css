@@ -297,7 +297,7 @@
 
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .questions_box {
     flex-direction: column;
   }
@@ -306,18 +306,28 @@
     border-right: 20px;
     text-align: center;
   } 
+  .card_left {
+    
+  }
 }
 
+@media (max-width: 1176px) {
+ 
+  #gameArea {
+    border-left: 15px solid #3b51ab;
+    border-right: 15px solid #3b51ab;
+  } 
+}
 
 .card_right {
   box-shadow: 0 4px 12px 0 rgba(245, 242, 242, 0.9);
-  width: 320px;
+  width: 220px;
   border-radius: 5px;
 }
 
 .card_left{
   box-shadow: 0 4px 12px 0 rgba(245, 242, 242, 0.9);
-  width: 320px;
+  width: 220px;
   border-radius: 5px;
   float: right;
 }
