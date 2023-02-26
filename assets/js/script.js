@@ -217,6 +217,7 @@ playB.onclick = function () {
   secondP.style.display = "none";
   gameTitle.style.display = "none";
   gameArea.style.display = "block";
+  generateRandomQuestion();
   makeQuestion();
   makeTimer();
   renderProgress();
@@ -229,8 +230,9 @@ let count = 0;
 const qTime = 10; // 10s
 const timeLeft = 150; // 150px
 const timeUnit = timeLeft / qTime;
-let TIMER= "";
+let TIMER = "";
 let score = 0;
+let randomNumber = currentQ;
 
 function makeQuestion() {
   let ques = questions[currentQ];
@@ -258,10 +260,10 @@ function renderProgress() {
 // Function to check if answer is correct
 function checkAnswer(answer) {
   if (answer == questions[currentQ].correct) {
-     // answer is correct
-     score++;
-     // change progress color to green
-     ansCorrect();
+    // answer is correct
+    score++;
+    // change progress color to green
+    ansCorrect();
   } else {
     ansWrong();
   }
@@ -273,6 +275,26 @@ function checkAnswer(answer) {
     clearInterval(TIMER)
     gameArea.style.display = "none";
     scoreRender();
+  }
+}
+
+let myArray = [];
+
+function generateRandomQuestion() {
+  const randomNumber = Math.floor(Math.random() * questions.length);
+
+  let hitDuplicate = 0;
+
+  if (myArray.length == 0) {
+  } else {
+    for (let i = 0; i < myArray.length; i++) {
+      if (randomNumber == myArray[i]) {
+        hitDuplicate = 1;
+      }
+    }
+    if (hitDuplicate == 1) {
+      generateRandomQuestion();  
+    } 
   }
 }
 
@@ -294,55 +316,66 @@ function makeTimer() {
     counter.innerHTML = count;
     timeGauge.style.width = count * timeUnit + "px";
     count++
-  } 
-  else {
+  } else {
     count = 0;
     // change progress color to red
     ansWrong();
     if (currentQ < lastQ) {
       currentQ++;
-      makeQuestion();
-     // setInterval();
     } else {
       // end the quiz and show the score
       clearInterval(TIMER);
       scoreRender();
-      clearInterval('function');
     }
   }
 }
 
-(function() {
+(function () {
   let s = document.getElementById('counter').style,
-      f = false,
-      c1 = 'red',
-      c3 = 'white';
-      c2 = 'green';
+    f = false,
+    c1 = 'red',
+    c3 = 'white';
+  c2 = 'green';
 
-  setInterval(function() {
+  setInterval(function () {
     s.backgroundColor = c3;
-    if (count >= 9){
+    if (count >= 9) {
       s.backgroundColor = f ? c1 : c3;
       f = !f;
-    }}, 200);
-  })();
+    }
+  }, 200);
+})();
+
+// calculate the amount of question percent answered by the user
+const scorePerCent = Math.round(100 * score / questions.length);
 
 // score render
-function scoreRender(){
-    gameArea.style.display = "none";
-    results.style.display = "block";
-    
-    // calculate the amount of question percent answered by the user
-    const scorePerCent = Math.round(100 * score/questions.length);
-    
-    // choose the image based on the scorePerCent
-    let img = (scorePerCent >= 80) ? "img/5.png" :
-              (scorePerCent >= 60) ? "img/4.png" :
-              (scorePerCent >= 40) ? "img/3.png" :
-              (scorePerCent >= 20) ? "img/2.png" :
-              "img/1.png";
-    
-    //scoreDiv.innerHTML = "<img src="+ img +">";
-    results.innerHTML += "<p>"+ scorePerCent +"%</p>";
+function scoreRender() {
+  gameArea.style.display = "none";
+  modalResults.style.display = "block";
+  score.innerHTML += "<p>" + scorePerCent + "%</p>";
+
+
+
+  // choose the image based on the scorePerCent
+  //let img = (scorePerCent >= 80) ? "img/5.png" :
+  //(scorePerCent >= 60) ? "img/4.png" :
+  //(scorePerCent >= 40) ? "img/3.png" :
+  //(scorePerCent >= 20) ? "img/2.png" :
+  //"img/1.png";
+
+  //scoreDiv.innerHTML = "<img src="+ img +">";
+
 }
 
+// Get the modal
+let result = document.getElementById("modalResults");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modalResults.style.display = "none";
+}

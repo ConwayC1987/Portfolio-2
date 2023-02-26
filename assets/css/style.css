@@ -403,3 +403,7 @@ img {
   font-weight: bold;
 }
 
+#score {
+  color: aqua;
+  font-size: 20%;
+}

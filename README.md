@@ -1,28 +1,33 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome ConwayC1987,
+The Guess Who Pub Quiz Game is a knowledge based quiz game that gives the users two choices and a question. The user has the option to read the rules of the game to better understand the game. The user is given an opportunity to play the quiz against a clock to select the correct answer providing the user with two images with the name of the person.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+- By Ciaran Conway
+  **February 22, 2023**
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+# UX Design
 
-## Gitpod Reminders
+For `Project-2` it was decided to create a quiz game that I would like to play myself. I also wanted to design something the could be marketed to a user (Pub owners) so I decided to make a simple and fun pub quiz game that rewards the user. Rather than just making a normal quiz site I wanted to add some extra aspects that I felt would make the quiz more fun and appealing to the users. I decided that because it was a pub quiz the questions would have to be simple questions for the user as alcohol might of been consumed. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+It was decided that I would use two options for the answers giving the user a 50/50 chance of getting it right making it more fun. 65% of people's brain work visually meaning they find it easier seeing images so it was decided that each question how have an image associated with it. The questions I decided to select involve sports, Irish politics and famous celebrities actors. I also wanted to add a countdown timer to create urgency also a way for the user to know how many questions left and how many they got correct.
 
-`python3 -m http.server`
+Font
+The font style that I decided to use was from google fonts Oswald and sans-serif were used.
 
-A blue button should appear to click: _Make Public_,
+Color
+The color scheme I decided on was a dark background color a light shaded black and a bright vibrant blue color to stand out. As this is a single page game the background is constant for the entire website including for pop up modals
 
-Another blue button should appear to click: _Open Browser_.
+Images
+The images on this site are used were all made to be the same size and were got from Wikipedia.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# User Stories
 
-A blue button should appear to click: _Make Public_,
+As a user I want to be able to play a fun game.
+As a user I want to be able to see the rules for the quiz before I start
+As a user I want to get a score from the quiz to mark my progress 
+As a user I want to play again when I complete the quiz
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
 To log into the Heroku toolbelt CLI:
 
