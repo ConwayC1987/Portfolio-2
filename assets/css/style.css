@@ -340,14 +340,14 @@
 }
 @media (max-width: 415px) {
   #counter {
-    margin-left : 120px;
+    margin-left : 135px;
   }
   .option-left {
     padding-right: 25%;
   }
   .option-right {
     float:none;
-    padding-left: 22%;
+    padding-left: 24%;
   }
   #timeGauge{
     margin-top : 2px;
@@ -358,28 +358,48 @@
     padding: 8px 14px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 394px) {
   #counter {
     text-align: center;
   }
   .option-left {
-    padding-right: 20%;
+    padding-right: 22%;
   }
   .option-right {
     float:none;
     padding-left: 25%;
   }
 }
-@media (max-width: 370px) {
+@media (max-width: 376px) {
   #counter {
-    text-align: center;
+    margin-left : 135px;
+  }
+  #timeGauge {
+    display: none;
   }
   .option-left {
-    padding-right: 18%;
+    padding-right: 22%;
   }
   .option-right {
     float:none;
-    padding-left: 25%;
+    padding-left: 22%;
+  }
+  
+}
+
+@media (max-width: 361px) {
+  #counter {
+    margin-left : 135px;
+  }
+  #timeGauge {
+    display: none;
+  }
+  .option-left {
+    padding-right: 21%;
+  }
+  .option-right {
+    float:none;
+    padding-left: 21%;
   }
   
 }
@@ -436,9 +456,9 @@
     padding-left: 20%;
   }
 }
-@media (max-width: 330px) {
+@media (max-width: 335px) {
   #counter {
-    margin-left : 130px;
+    margin-left : 145px;
   }
   #timeGauge{
     margin-top : 2px;
@@ -450,6 +470,27 @@
   .option-right {
     float:none;
     padding-left: 19%;
+  }
+  #landingPage #begin{
+    font-size:x-small;
+    padding: 5px 3px;
+  }
+}
+
+@media (max-width: 328px) {
+  #counter {
+    margin-left : 140px;
+  }
+  #timeGauge{
+    margin-top : 2px;
+    margin-left : 0px;
+  }
+  .option-left {
+    padding-right: 18%;
+  }
+  .option-right {
+    float:none;
+    padding-left: 17%;
   }
   #landingPage #begin{
     font-size:x-small;

@@ -46,9 +46,8 @@ let qImg = document.getElementById("qImg");
 let qImg1 = document.getElementById("qImg1");
 let option1 = document.getElementById("option1");
 let option2 = document.getElementById("option2");
-
+//___________________________________________________________________________________________________________________//
 // Questions for the quiz
-
 let questions = [{
     question: "Who is the oldest?",
     imgSrc: "assets/images/tom_hanks.jpg",
@@ -162,6 +161,7 @@ let questions = [{
     correct: "option1"
   }
 ];
+//__________________________________________________________________________________________________________________________//
 
 // Play button to start quiz
 playB.onclick = function () {
