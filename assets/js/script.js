@@ -270,12 +270,13 @@ function makeTimer() {
     count++
   } else {
     count = 0;
-    // change progress color to red
+    // Change progress color to red
     ansWrong();
     if (currentQ < lastQ) {
       currentQ++;
+      makeQuestion();
     } else {
-      // end the quiz and show the score
+      // End the quiz and show the score
       clearInterval(TIMER);
       scoreRender();
     }
@@ -295,7 +296,7 @@ function makeTimer() {
       s.backgroundColor = f ? c1 : c3;
       f = !f;
     }
-  }, 200);
+  }, 280);
 })();
 
 // calculate the amount of question percent answered by the user
