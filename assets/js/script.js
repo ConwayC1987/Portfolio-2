@@ -169,7 +169,7 @@ playB.onclick = function () {
   secondP.style.display = "none";
   gameTitle.style.display = "none";
   gameArea.style.display = "block";
-  generateRandomQuestion();
+  //generateRandomQuestion();
   makeQuestion();
   makeTimer();
   renderProgress();
@@ -184,7 +184,7 @@ const timeLeft = 150; // 150px
 const timeUnit = timeLeft / qTime;
 let TIMER = "";
 let score = 0;
-let randomNumber = currentQ;
+//let randomNumber = currentQ;
 
 function makeQuestion() {
   let ques = questions[currentQ];
@@ -212,9 +212,9 @@ function renderProgress() {
 // Function to check if answer is correct
 function checkAnswer(answer) {
   if (answer == questions[currentQ].correct) {
-    // answer is correct
+    // Answer is correct
     score++;
-    // change progress color to green
+    // Change progress color to green
     ansCorrect();
   } else {
     ansWrong();
@@ -230,26 +230,24 @@ function checkAnswer(answer) {
   }
 }
 
-let myArray = [];
+//let myArray = [];
 
-function generateRandomQuestion() {
-  const randomNumber = Math.floor(Math.random() * questions.length);
+//function generateRandomQuestion() {
+  //const randomNumber = Math.floor(Math.random() * questions.length);
 
-  let hitDuplicate = 0;
+  //let hitDuplicate = 0;
 
-  if (myArray.length == 0) {
-  } else {
-    for (let i = 0; i < myArray.length; i++) {
-      if (randomNumber == myArray[i]) {
-        hitDuplicate = 1;
-      }
-    }
-    if (hitDuplicate == 1) {
-      generateRandomQuestion();  
-    } 
-  }
-}
-
+  //if (myArray.length == 0) {} else {
+  //  for (let i = 0; i < myArray.length; i++) {
+   //   if (randomNumber == myArray[i]) {
+   //     hitDuplicate = 1;
+  //    }
+   // }
+   // if (hitDuplicate == 1) {
+     // generateRandomQuestion();
+   // }
+ // }
+//}
 
 // Answer is Correct
 function ansCorrect() {
@@ -260,8 +258,6 @@ function ansCorrect() {
 function ansWrong() {
   document.getElementById(currentQ).style.backgroundColor = 'red';
 }
-
-
 
 function makeTimer() {
   if (count <= qTime) {
@@ -300,15 +296,19 @@ function makeTimer() {
 })();
 
 // calculate the amount of question percent answered by the user
-const scorePerCent = Math.round(100 * score / questions.length);
+const scorePer = Math.round(100 * score / questions.length);
+const scoreDiv = document.getElementById("scoreContainer");
 
 // score render
 function scoreRender() {
+  scoreDiv.style.display = "block";
+    
+    // calculate the amount of question percent answered by the user
+    const scorePer = Math.round(100 * score/questions.length);
   gameArea.style.display = "none";
   modalResults.style.display = "block";
-  score.innerHTML += "<p>" + scorePerCent + "%</p>";
-
-
+  scoreDiv.style.display = "block";
+  scoreDiv.innerHTML += "<p>"+ scorePer +"%</p>";
 
   // choose the image based on the scorePerCent
   //let img = (scorePerCent >= 80) ? "img/5.png" :
@@ -318,8 +318,8 @@ function scoreRender() {
   //"img/1.png";
 
   //scoreDiv.innerHTML = "<img src="+ img +">";
-
 }
+
 
 // Get the modal
 let result = document.getElementById("modalResults");
