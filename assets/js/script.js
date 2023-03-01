@@ -298,6 +298,7 @@ function makeTimer() {
 // calculate the amount of question percent answered by the user
 const scorePer = Math.round(100 * score / questions.length);
 const scoreDiv = document.getElementById("scoreContainer");
+const resultMessage = document.getElementById("resultMessage");
 
 // score render
 function scoreRender() {
@@ -310,14 +311,18 @@ function scoreRender() {
   scoreDiv.style.display = "block";
   scoreDiv.innerHTML += "<p>"+ scorePer +"%</p>";
 
-  // choose the image based on the scorePerCent
-  //let img = (scorePerCent >= 80) ? "img/5.png" :
-  //(scorePerCent >= 60) ? "img/4.png" :
-  //(scorePerCent >= 40) ? "img/3.png" :
-  //(scorePerCent >= 20) ? "img/2.png" :
-  //"img/1.png";
-
-  //scoreDiv.innerHTML = "<img src="+ img +">";
+  if(scorePer >= 100){  
+    document.getElementById("resultMessage").innerHTML = "You won free drinks for the table"; 
+    }  
+    else if(scorePer >= 80){  
+      document.getElementById("resultMessage").innerHTML = "Well done better luck next time";  
+    }  
+    else if(scorePer >= 60){  
+      document.getElementById("resultMessage").innerHTML = "You might of had enough";  
+    }  
+    else{  
+      document.getElementById("resultMessage").innerHTML = "Your drunk go home"; 
+    }  
 }
 
 
@@ -331,4 +336,14 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modalResults.style.display = "none";
+}
+
+replay.onclick = function () {
+  modalResults.style.display = "none";
+  gameArea.style.display = "block";
+  //generateRandomQuestion();
+  makeQuestion();
+  makeTimer();
+  renderProgress();
+  TIMER = setInterval(makeTimer, 1000); // 1000ms = 1s
 }
