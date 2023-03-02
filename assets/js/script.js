@@ -1,7 +1,16 @@
+// Variables //
+const qTime = 10; // 10s
+const timeLeft = 150; // 150px
+const timeUnit = timeLeft / qTime;
+let TIMER = "";
+let score = 0;
+const counter = document.getElementById("counter");
+const timeGauge = document.getElementById("timeGauge");
+const progress = document.getElementById("progress");
 // Function for hiding some page content after being clicked. //
 const element = document.getElementById("begin");
 element.addEventListener("click", hidePage);
-//const myTimeout = setTimeout(hidePage, 9900);
+const myTimeout = setTimeout(hidePage, 9900);
 function hidePage() {
   document.getElementById("landingPage").style.display = "none";
   rulesPage.style.display = "block";
@@ -40,14 +49,15 @@ window.onclick = function (event) {
   }
 }
 
-let playB = document.getElementById("play");
+
+
+//___________________________________________________________________________________________________________________//
+// Questions for the quiz
 let question = document.getElementById("question");
 let qImg = document.getElementById("qImg");
 let qImg1 = document.getElementById("qImg1");
 let option1 = document.getElementById("option1");
 let option2 = document.getElementById("option2");
-//___________________________________________________________________________________________________________________//
-// Questions for the quiz
 let questions = [{
     question: "Who is the oldest?",
     imgSrc: "assets/images/tom_hanks.jpg",
@@ -162,7 +172,7 @@ let questions = [{
   }
 ];
 //__________________________________________________________________________________________________________________________//
-
+let playB = document.getElementById("play");
 // Play button to start quiz
 playB.onclick = function () {
   modal.style.display = "none";
@@ -179,11 +189,6 @@ playB.onclick = function () {
 let lastQ = questions.length - 1;
 let currentQ = 0;
 let count = 0;
-const qTime = 10; // 10s
-const timeLeft = 150; // 150px
-const timeUnit = timeLeft / qTime;
-let TIMER = "";
-let score = 0;
 //let randomNumber = currentQ;
 
 function makeQuestion() {
@@ -195,9 +200,6 @@ function makeQuestion() {
   option2.innerHTML = ques.option2;
 }
 
-const counter = document.getElementById("counter");
-const timeGauge = document.getElementById("timeGauge");
-const progress = document.getElementById("progress");
 
 // render progress
 function renderProgress() {
