@@ -238,7 +238,6 @@
   color: black;
 }
 
-
 #gameTop{
   display: flex;
   flex-direction: row;
@@ -498,8 +497,6 @@
   }
 }
 
-
-
 @media (max-width: 780px) {
   #question {
     color: white;
@@ -547,7 +544,6 @@ img {
 .options:hover{
   border : 2px solid rgb(245, 244, 244);
   font-weight: bold;
-  background-color: rgb(174, 77, 77);
 }
 
 .options{

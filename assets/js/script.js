@@ -172,8 +172,9 @@ let questions = [{
   }
 ];
 //__________________________________________________________________________________________________________________________//
-let playB = document.getElementById("play");
+
 // Play button to start quiz
+let playB = document.getElementById("play");
 playB.onclick = function () {
   modal.style.display = "none";
   secondP.style.display = "none";
@@ -286,7 +287,6 @@ function makeTimer() {
     f = false,
     c1 = 'red',
     c3 = 'white';
-  c2 = 'green';
 
   setInterval(function () {
     s.backgroundColor = c3;
@@ -295,7 +295,7 @@ function makeTimer() {
       f = !f;
     }
   }, 280);
-})();
+});
 
 // calculate the amount of question percent answered by the user
 const scorePer = Math.round(100 * score / questions.length);
