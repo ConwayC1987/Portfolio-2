@@ -101,7 +101,7 @@
     width: 100%;
     display:none;
   }
-   /* Centers the button to the middle of the image */
+   /* Centers the button to the middle of the image for the second page */
   #rulesPage #rules {
     position: absolute;
     top: 50%;
@@ -117,7 +117,7 @@
     border-radius: 5px;
     text-align: center;
   }
-  /* Hover effect over the buttons */
+  /*___________________________ Hover effect over the buttons____________________________________ */
   #landingPage #begin:hover {
     background-color: whitesmoke;
     color: #3b51ab;
@@ -170,7 +170,7 @@
   font-weight: bolder;
  }
 
-   /* ---------------------------------------------------------------- */
+   /* _______________________________Modal code from w3schools___________________________________ */
 
    /* The Modal (background) */
 .modal {
@@ -222,30 +222,31 @@
   font-weight: bold;
 }
 
-
+/* The modal header */
 .modal-header {
   padding: 2px 10px;
   background-color: rgba(176, 170, 170, 0.9);
   color: black;
 }
-
+/* The modal body */
 .modal-body {
   padding: 2px 10px;
   background-color: rgba(176, 170, 170, 0.9);
   color: black;
 }
-
+/* The modal footer */
 .modal-footer {
   padding: 2px 10px;
   background-color: rgba(176, 170, 170, 0.9);
   color: black;
 }
-
+/* The top of the game area */
 #gameTop{
-  display: flex;
   flex-direction: row;
+  vertical-align: middle;
+  display: inline-block;
 }
-
+/* The clock for the game */
 #counter{
   width: 50px;
   height: 50px;
@@ -257,38 +258,38 @@
   background: whitesmoke;
   margin-left : 130px;
 }
-
+/* The digit for the time */
 #timer{
   text-align: center;
   color:black;
   padding-top: 2%;
 }
-
+/* The main game area */
 #gameArea{
   display:none;
   border-left: 250px solid #3b51ab;
   border-right: 250px solid #3b51ab;
 }
-
+/* The question box for the game using flexbox */
 .questions_box {
   display: flex;
   flex-direction: row;
   text-align: center;
 }
-
+/* The option on the left of the screen */
 .option-left {
   background-color: #0f1cc68d;
   padding: 2px;
   flex: 50%;
   float: right;
 }
-
+/* The option on the right of the screen */
 .option-right {
   background-color: #0f1cc68d;
   padding: 2px;
   flex: 50%;
 }
-
+/* The question secton for the quiz */
 #question {
   color:white;
   border:2px solid #3b51ab;
@@ -296,6 +297,121 @@
   border-right: 240px solid #3b51ab;
   padding: 20px;
 }
+/* Card to hold the images on the right size */
+.card_right {
+  box-shadow: 0 4px 12px 0 rgba(245, 242, 242, 0.9);
+  width: 210px;
+  border-radius: 5px;
+}
+/* Card to hold the images on the left size */
+.card_left{
+  box-shadow: 0 4px 12px 0 rgba(245, 242, 242, 0.9);
+  width: 210px;
+  border-radius: 5px;
+  float: right;
+}
+/* Border radius for the questions images and setting the width and height */
+img {
+  border-radius: 9px 9px 9px 9px;
+  width: 200px;
+  height:auto;
+}
+/* User answer options  */
+.options{
+  border : 2px solid rgb(245, 244, 244);
+  font-weight: bold;
+  background-color: whitesmoke;
+  font-size: 25px;
+}
+/* Gauge that measures the time left  */
+#timeGauge{
+  background-color: rgb(210, 46, 46);
+  margin-top : 5px;
+  margin-left : 80px;
+  height : 15px;
+  border-radius: 15px;
+}
+/* Progress section to let user know if it is right or wrong  */
+#progress{
+  padding:2px;
+  text-align: center;
+}
+/* Progress circles let user know if it is right or wrong  */
+.prog{
+  width : 18px;
+  height : 18px;
+  border: 2px solid #e2dddd;
+  display: inline-block;
+  border-radius: 50%;
+  margin-left : 2px;
+  margin-right : 2px;
+}
+
+/* The Modal (background) */
+.modalResults {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-contentResults {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.closeResults {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+button{
+  background-color: #3b51ab;
+  color: white;
+  font-size: 18px;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bolder;
+ }
+ #results #play:hover {
+  background-color: whitesmoke;
+  color: #3b51ab;
+}
+
+#results #exist{
+  background-color: #3b51ab;
+  color: white;
+  font-size: 18px;
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bolder;
+ }
+ #results #exist:hover {
+  background-color: whitesmoke;
+  color: #3b51ab;
+}
+
+/* ______________________________________Media Queries_____________________________________________*/
 
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
@@ -520,126 +636,4 @@
     border-left: 0px solid #3b51ab;
     border-right: 0px solid #3b51ab;
   } 
-}
-
-.card_right {
-  box-shadow: 0 4px 12px 0 rgba(245, 242, 242, 0.9);
-  width: 210px;
-  border-radius: 5px;
-}
-
-.card_left{
-  box-shadow: 0 4px 12px 0 rgba(245, 242, 242, 0.9);
-  width: 210px;
-  border-radius: 5px;
-  float: right;
-}
-
-img {
-  border-radius: 9px 9px 9px 9px;
-}
-
-#qImg img, #qImg1 img{
-  width: 200px;
-  height:auto;
-}
-
-.options:hover{
-  border : 2px solid rgb(245, 244, 244);
-  font-weight: bold;
-}
-
-.options{
-  border : 2px solid rgb(245, 244, 244);
-  font-weight: bold;
-  background-color: whitesmoke;
-  font-size: 25px;
-}
-
-#gameTop{
-  display: inline-block;
-  vertical-align: middle;
-}
-
-#timeGauge{
-  background-color: rgb(210, 46, 46);
-  margin-top : 5px;
-  margin-left : 80px;
-  height : 15px;
-  border-radius: 15px;
-}
-#progress{
-  padding:2px;
-  text-align: center;
-}
-.prog{
-  width : 18px;
-  height : 18px;
-  border: 2px solid #e2dddd;
-  display: inline-block;
-  border-radius: 50%;
-  margin-left : 2px;
-  margin-right : 2px;
-}
-
-/* The Modal (background) */
-.modalResults {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-contentResults {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.closeResults {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-button{
-  background-color: whitesmoke;
-  color: black;
-  font-size: 18px;
-  padding: 12px 18px;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: bolder;
- }
- #results #play:hover {
-  background-color: rgb(74, 99, 222);
-}
-
-#results #exist{
-  background-color: whitesmoke;
-  color: black;
-  font-size: 18px;
-  padding: 12px 18px;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: bolder;
- }
- #results #exist:hover {
-  background-color: rgb(74, 99, 222);
 }
