@@ -102,7 +102,7 @@ let questions = [{
     question: "Who is richer?",
     imgSrc: "assets/images/arnold_S.jpg",
     imgSrc1: "assets/images/syl_S.jpg",
-    option1: "Arnold Schwarzenegger",
+    option1: "Schwarzenegger",
     option2: "Sylvester Stallone",
     correct: "option1"
   },
@@ -110,7 +110,7 @@ let questions = [{
     question: "Who is the oldest?",
     imgSrc: "assets/images/arnold_S.jpg",
     imgSrc1: "assets/images/syl_S.jpg",
-    option1: "Arnold Schwarzenegger",
+    option1: "Schwarzenegger",
     option2: "Sylvester Stallone",
     correct: "option2"
   },
@@ -119,14 +119,14 @@ let questions = [{
     imgSrc: "assets/images/messi.jpg",
     imgSrc1: "assets/images/ronaldo.jpg",
     option1: "Lionel Messi",
-    option2: "Cristiano Ronaldo",
+    option2: "Ronaldo",
     correct: "option2"
   },
   {
     question: "Who is the oldest?",
     imgSrc: "assets/images/arnold_S.jpg",
     imgSrc1: "assets/images/syl_S.jpg",
-    option1: "Arnold Schwarzenegger",
+    option1: "Schwarzenegger",
     option2: "Sylvester Stallone",
     correct: "option2"
   },
@@ -135,14 +135,14 @@ let questions = [{
     imgSrc: "assets/images/messi.jpg",
     imgSrc1: "assets/images/ronaldo.jpg",
     option1: "Lionel Messi",
-    option2: "Cristiano Ronaldo",
+    option2: "Ronaldo",
     correct: "option1"
   },
   {
     question: "Who is the oldest?",
     imgSrc: "assets/images/arnold_S.jpg",
     imgSrc1: "assets/images/syl_S.jpg",
-    option1: "Arnold Schwarzenegger",
+    option1: "Schwarzenegger",
     option2: "Sylvester Stallone",
     correct: "option2"
   },
@@ -151,14 +151,14 @@ let questions = [{
     imgSrc: "assets/images/messi.jpg",
     imgSrc1: "assets/images/ronaldo.jpg",
     option1: "Lionel Messi",
-    option2: "Cristiano Ronaldo",
+    option2: "Ronaldo",
     correct: "option1"
   },
   {
     question: "Who is the oldest?",
     imgSrc: "assets/images/arnold_S.jpg",
     imgSrc1: "assets/images/syl_S.jpg",
-    option1: "Arnold Schwarzenegger",
+    option1: "Schwarzenegger",
     option2: "Sylvester Stallone",
     correct: "option2"
   },
@@ -167,7 +167,7 @@ let questions = [{
     imgSrc: "assets/images/messi.jpg",
     imgSrc1: "assets/images/ronaldo.jpg",
     option1: "Lionel Messi",
-    option2: "Cristiano Ronaldo",
+    option2: "Ronaldo",
     correct: "option1"
   }
 ];
@@ -344,6 +344,8 @@ replay.onclick = function () {
   modalResults.style.display = "none";
   gameArea.style.display = "block";
   //generateRandomQuestion();
+  progress.replaceChildren();
+  score= 0;
   makeQuestion();
   makeTimer();
   renderProgress();
