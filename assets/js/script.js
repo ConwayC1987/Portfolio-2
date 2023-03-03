@@ -7,6 +7,8 @@ let score = 0;
 const counter = document.getElementById("counter");
 const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
+//______________________________________________________________________________________________//
+
 // Function for hiding some page content after being clicked. //
 const element = document.getElementById("begin");
 element.addEventListener("click", hidePage);
@@ -40,8 +42,6 @@ exist.onclick = function () {
   modal.style.display = "none";
 }
 
-
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
@@ -49,9 +49,7 @@ window.onclick = function (event) {
   }
 }
 
-
-
-//___________________________________________________________________________________________________________________//
+//___________________________________Questions___________________________________________________//
 // Questions for the quiz
 let question = document.getElementById("question");
 let qImg = document.getElementById("qImg");
@@ -70,8 +68,8 @@ let questions = [{
     question: "Who is the oldest?",
     imgSrc: "assets/images/arnold_S.jpg",
     imgSrc1: "assets/images/syl_S.jpg",
-    option1: "Arnold Schwarzenegger",
-    option2: "Sylvester Stallone",
+    option1: "Schwarzenegger",
+    option2: "Sylv Stallone",
     correct: "option2"
   },
   {
@@ -103,7 +101,7 @@ let questions = [{
     imgSrc: "assets/images/arnold_S.jpg",
     imgSrc1: "assets/images/syl_S.jpg",
     option1: "Schwarzenegger",
-    option2: "Sylvester Stallone",
+    option2: "Sylv Stallone",
     correct: "option1"
   },
   {
@@ -111,7 +109,7 @@ let questions = [{
     imgSrc: "assets/images/arnold_S.jpg",
     imgSrc1: "assets/images/syl_S.jpg",
     option1: "Schwarzenegger",
-    option2: "Sylvester Stallone",
+    option2: "Sylv Stallone",
     correct: "option2"
   },
   {
@@ -127,7 +125,7 @@ let questions = [{
     imgSrc: "assets/images/arnold_S.jpg",
     imgSrc1: "assets/images/syl_S.jpg",
     option1: "Schwarzenegger",
-    option2: "Sylvester Stallone",
+    option2: "Sylv Stallone",
     correct: "option2"
   },
   {
@@ -143,7 +141,7 @@ let questions = [{
     imgSrc: "assets/images/arnold_S.jpg",
     imgSrc1: "assets/images/syl_S.jpg",
     option1: "Schwarzenegger",
-    option2: "Sylvester Stallone",
+    option2: "Sylv Stallone",
     correct: "option2"
   },
   {
@@ -159,7 +157,7 @@ let questions = [{
     imgSrc: "assets/images/arnold_S.jpg",
     imgSrc1: "assets/images/syl_S.jpg",
     option1: "Schwarzenegger",
-    option2: "Sylvester Stallone",
+    option2: "Sylv Stallone",
     correct: "option2"
   },
   {
@@ -171,7 +169,7 @@ let questions = [{
     correct: "option1"
   }
 ];
-//__________________________________________________________________________________________________________________________//
+//______________________________________Play Game________________________________________________//
 
 // Play button to start quiz
 let playB = document.getElementById("play");
@@ -186,12 +184,13 @@ playB.onclick = function () {
   renderProgress();
   TIMER = setInterval(makeTimer, 1000); // 1000ms = 1s
 }
-
+// Some variables for the questions
 let lastQ = questions.length - 1;
 let currentQ = 0;
 let count = 0;
 //let randomNumber = currentQ;
 
+// Function to make questions
 function makeQuestion() {
   let ques = questions[currentQ];
   question.innerHTML = "<p>" + ques.question + "</p>";
@@ -202,11 +201,21 @@ function makeQuestion() {
 }
 
 
-// render progress
+// Function to display area to let user know how many questions in the quiz
 function renderProgress() {
   for (let quesIndex = 0; quesIndex <= lastQ; quesIndex++) {
     progress.innerHTML += "<div class='prog' id=" + quesIndex + "></div>";
   }
+}
+// Functions to show the user how many questions are correct
+// Answer is Correct
+function ansCorrect() {
+  document.getElementById(currentQ).style.backgroundColor = "green";
+}
+
+// Answer is Wrong
+function ansWrong() {
+  document.getElementById(currentQ).style.backgroundColor = 'red';
 }
 
 //option1.addEventListener("click",checkAnswer('option1'));
@@ -252,16 +261,7 @@ function checkAnswer(answer) {
  // }
 //}
 
-// Answer is Correct
-function ansCorrect() {
-  document.getElementById(currentQ).style.backgroundColor = "green";
-}
-
-// Answer is Wrong
-function ansWrong() {
-  document.getElementById(currentQ).style.backgroundColor = 'red';
-}
-
+// Function to make a timer for the quiz
 function makeTimer() {
   if (count <= qTime) {
     counter.innerHTML = count;
