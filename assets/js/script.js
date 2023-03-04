@@ -18,6 +18,7 @@ const myTimeout = setTimeout(hidePage, 9900);
 function hidePage() {
   document.getElementById("landingPage").style.display = "none";
   rulesPage.style.display = "block";
+  gameTitle.style.display = "none";
 }
 
 //___________________________________Modal Rules Section_________________________________________//
