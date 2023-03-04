@@ -1,3 +1,4 @@
+//__________________________________Variables__________________________________________________//
 // Variables //
 const qTime = 10; // 10s
 const timeLeft = 150; // 150px
@@ -7,7 +8,8 @@ let score = 0;
 const counter = document.getElementById("counter");
 const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
-//______________________________________________________________________________________________//
+const refreshButton = document.getElementById("refresh-button");
+//__________________________________Landing Page_______________________________________________//
 
 // Function for hiding some page content after being clicked. //
 const element = document.getElementById("begin");
@@ -18,6 +20,7 @@ function hidePage() {
   rulesPage.style.display = "block";
 }
 
+//___________________________________Modal Rules Section_________________________________________//
 // Get the modal
 let modal = document.getElementById("myModal");
 
@@ -49,7 +52,7 @@ window.onclick = function (event) {
   }
 }
 
-//___________________________________Questions___________________________________________________//
+//_____________________________________Questions___________________________________________________//
 // Questions for the quiz
 let question = document.getElementById("question");
 let qImg = document.getElementById("qImg");
@@ -169,7 +172,7 @@ let questions = [{
     correct: "option1"
   }
 ];
-//______________________________________Play Game________________________________________________//
+//__________________________________Play Game Function____________________________________________//
 
 // Play button to start quiz
 let playB = document.getElementById("play");
@@ -184,6 +187,8 @@ playB.onclick = function () {
   renderProgress();
   TIMER = setInterval(makeTimer, 1000); // 1000ms = 1s
 }
+
+//___________________________________Make Question Function______________________________________//
 // Some variables for the questions
 let lastQ = questions.length - 1;
 let currentQ = 0;
@@ -200,7 +205,7 @@ function makeQuestion() {
   option2.innerHTML = ques.option2;
 }
 
-
+//_____________________________________Progess Section__________________________________________//
 // Function to display area to let user know how many questions in the quiz
 function renderProgress() {
   for (let quesIndex = 0; quesIndex <= lastQ; quesIndex++) {
@@ -221,6 +226,7 @@ function ansWrong() {
 //option1.addEventListener("click",checkAnswer('option1'));
 //option2.addEventListener("click",checkAnswer('option2'));
 
+//_____________________________________Check Answer______________________________________________//
 // Function to check if answer is correct
 function checkAnswer(answer) {
   if (answer == questions[currentQ].correct) {
@@ -261,6 +267,7 @@ function checkAnswer(answer) {
  // }
 //}
 
+//________________________________________Timer___________________________________________________//
 // Function to make a timer for the quiz
 function makeTimer() {
   if (count <= qTime) {
@@ -281,32 +288,32 @@ function makeTimer() {
     }
   }
 }
-
-(function () {
-  let s = document.getElementById('counter').style,
+// Function to make a timer flash red when the has a few seconds left
+// Code idea from http://jsfiddle.net/Dzk2h/2/
+(function() {
+    var s = document.getElementById('counter').style,
     f = false,
     c1 = 'red',
     c3 = 'white';
 
   setInterval(function () {
     s.backgroundColor = c3;
-    if (count >= 9) {
+    if (count >= 7 && count <=  10) {
       s.backgroundColor = f ? c1 : c3;
       f = !f;
     }
-  }, 280);
-});
-
-// calculate the amount of question percent answered by the user
-const scorePer = Math.round(100 * score / questions.length);
+  }, 480);
+})();
+//_____________________________________Result Section____________________________________________//
+// Calculate the amount of questions percent answered by the user
 const scoreDiv = document.getElementById("scoreContainer");
 const resultMessage = document.getElementById("resultMessage");
 
-// score render
+// Function to display score results section
 function scoreRender() {
   scoreDiv.style.display = "block";
     
-    // calculate the amount of question percent answered by the user
+    // Calculate the amount of question percent answered by the user
     const scorePer = Math.round(100 * score/questions.length);
   gameArea.style.display = "none";
   modalResults.style.display = "block";
@@ -327,27 +334,28 @@ function scoreRender() {
     }  
 }
 
-
+//_____________________________________Modal Results_____________________________________________//
 // Get the modal
 let result = document.getElementById("modalResults");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modalResults.style.display = "none";
-}
-
+// Function for replaying the game
 replay.onclick = function () {
   modalResults.style.display = "none";
   gameArea.style.display = "block";
   //generateRandomQuestion();
   progress.replaceChildren();
-  score= 0;
+  scorePer = 0;
+  currentQ = 0;
+  score = 0;
   makeQuestion();
   makeTimer();
   renderProgress();
   TIMER = setInterval(makeTimer, 1000); // 1000ms = 1s
 }
+
+
+// Function for returning to homepage 
+const refreshPage = () => {
+  location.reload();
+}
+
+refreshButton.addEventListener('click', refreshPage)
