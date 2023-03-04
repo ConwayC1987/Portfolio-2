@@ -110,10 +110,10 @@ let questions = [{
   {
     question: "Who is the oldest?",
     imgSrc: "assets/images/arnold_S.webp",
-    imgSrc1: "assets/images/syl_S.webp",
+    imgSrc1: "assets/images/liam_Neeson.webp",
     option1: "Schwarzenegger",
-    option2: "Sylv Stallone",
-    correct: "option2"
+    option2: "Liam Neeson",
+    correct: "option1"
   },
   {
     question: "Who is has scored more goals?",
@@ -124,7 +124,7 @@ let questions = [{
     correct: "option2"
   },
   {
-    question: "Who is the oldest?",
+    question: "Who has acted in more movies?",
     imgSrc: "assets/images/arnold_S.webp",
     imgSrc1: "assets/images/syl_S.webp",
     option1: "Schwarzenegger",
@@ -140,31 +140,31 @@ let questions = [{
     correct: "option1"
   },
   {
-    question: "Who is the oldest?",
-    imgSrc: "assets/images/arnold_S.webp",
-    imgSrc1: "assets/images/syl_S.webp",
-    option1: "Schwarzenegger",
-    option2: "Sylv Stallone",
+    question: "Who is the youngest?",
+    imgSrc: "assets/images/tom_hanks.webp",
+    imgSrc1: "assets/images/simon_Cowell.webp",
+    option1: "Tom Hanks",
+    option2: "Simon Cowell",
     correct: "option2"
   },
   {
-    question: "Who is the youngest?",
+    question: "Who is the richer?",
     imgSrc: "assets/images/messi.webp",
     imgSrc1: "assets/images/ronaldo.webp",
     option1: "Lionel Messi",
     option2: "Ronaldo",
-    correct: "option1"
-  },
-  {
-    question: "Who is the oldest?",
-    imgSrc: "assets/images/arnold_S.webp",
-    imgSrc1: "assets/images/syl_S.webp",
-    option1: "Schwarzenegger",
-    option2: "Sylv Stallone",
     correct: "option2"
   },
   {
-    question: "Who is the youngest?",
+    question: "Who is the oldest?",
+    imgSrc: "assets/images/leo_D.webp",
+    imgSrc1: "assets/images/kate_Winslet.webp",
+    option1: "Leo DiCaprio",
+    option2: "Kate Winslet",
+    correct: "option1"
+  },
+  {
+    question: "Who has won more trophies in their career?",
     imgSrc: "assets/images/messi.webp",
     imgSrc1: "assets/images/ronaldo.webp",
     option1: "Lionel Messi",
@@ -302,7 +302,7 @@ function makeTimer() {
       s.backgroundColor = f ? c1 : c3;
       f = !f;
     }
-  }, 480);
+  }, 400);
 })();
 //_____________________________________Result Section____________________________________________//
 // Calculate the amount of questions percent answered by the user
@@ -343,6 +343,7 @@ replay.onclick = function () {
   gameArea.style.display = "block";
   //generateRandomQuestion();
   progress.replaceChildren();
+  scoreContainer.replaceChildren();
   scorePer = 0;
   currentQ = 0;
   score = 0;
