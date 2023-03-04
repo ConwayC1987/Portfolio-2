@@ -61,112 +61,112 @@ let option1 = document.getElementById("option1");
 let option2 = document.getElementById("option2");
 let questions = [{
     question: "Who is the oldest?",
-    imgSrc: "assets/images/tom_hanks.jpg",
-    imgSrc1: "assets/images/liam_Neeson.jpg",
+    imgSrc: "assets/images/tom_hanks.webp",
+    imgSrc1: "assets/images/liam_Neeson.webp",
     option1: "Tom Hanks",
     option2: "Liam Neeson",
     correct: "option2"
   },
   {
     question: "Who is the oldest?",
-    imgSrc: "assets/images/arnold_S.jpg",
-    imgSrc1: "assets/images/syl_S.jpg",
+    imgSrc: "assets/images/arnold_S.webp",
+    imgSrc1: "assets/images/syl_S.webp",
     option1: "Schwarzenegger",
     option2: "Sylv Stallone",
     correct: "option2"
   },
   {
     question: "Who is the younger?",
-    imgSrc: "assets/images/kate_Winslet.jpg",
-    imgSrc1: "assets/images/pam_A.jpg",
+    imgSrc: "assets/images/kate_Winslet.webp",
+    imgSrc1: "assets/images/pam_A.webp",
     option1: "Kate Winslet",
     option2: "Pam Anderson",
     correct: "option1"
   },
   {
     question: "Who is the youngest?",
-    imgSrc: "assets/images/leo_V.jpg",
-    imgSrc1: "assets/images/mary_L.jpg",
+    imgSrc: "assets/images/leo_V.webp",
+    imgSrc1: "assets/images/mary_L.webp",
     option1: "Leo Var",
     option2: "Mary Lou",
     correct: "option1"
   },
   {
     question: "Who is the oldest?",
-    imgSrc: "assets/images/pam_A.jpg",
-    imgSrc1: "assets/images/mary_L.jpg",
+    imgSrc: "assets/images/pam_A.webp",
+    imgSrc1: "assets/images/mary_L.webp",
     option1: "Pam Anderson",
     option2: "Mary Lou",
     correct: "option1"
   },
   {
     question: "Who is richer?",
-    imgSrc: "assets/images/arnold_S.jpg",
-    imgSrc1: "assets/images/syl_S.jpg",
+    imgSrc: "assets/images/arnold_S.webp",
+    imgSrc1: "assets/images/syl_S.webp",
     option1: "Schwarzenegger",
     option2: "Sylv Stallone",
     correct: "option1"
   },
   {
     question: "Who is the oldest?",
-    imgSrc: "assets/images/arnold_S.jpg",
-    imgSrc1: "assets/images/syl_S.jpg",
+    imgSrc: "assets/images/arnold_S.webp",
+    imgSrc1: "assets/images/syl_S.webp",
     option1: "Schwarzenegger",
     option2: "Sylv Stallone",
     correct: "option2"
   },
   {
     question: "Who is has scored more goals?",
-    imgSrc: "assets/images/messi.jpg",
-    imgSrc1: "assets/images/ronaldo.jpg",
+    imgSrc: "assets/images/messi.webp",
+    imgSrc1: "assets/images/ronaldo.webp",
     option1: "Lionel Messi",
     option2: "Ronaldo",
     correct: "option2"
   },
   {
     question: "Who is the oldest?",
-    imgSrc: "assets/images/arnold_S.jpg",
-    imgSrc1: "assets/images/syl_S.jpg",
+    imgSrc: "assets/images/arnold_S.webp",
+    imgSrc1: "assets/images/syl_S.webp",
     option1: "Schwarzenegger",
     option2: "Sylv Stallone",
     correct: "option2"
   },
   {
     question: "Who is the youngest?",
-    imgSrc: "assets/images/messi.jpg",
-    imgSrc1: "assets/images/ronaldo.jpg",
-    option1: "Lionel Messi",
-    option2: "Ronaldo",
-    correct: "option1"
-  },
-  {
-    question: "Who is the oldest?",
-    imgSrc: "assets/images/arnold_S.jpg",
-    imgSrc1: "assets/images/syl_S.jpg",
-    option1: "Schwarzenegger",
-    option2: "Sylv Stallone",
-    correct: "option2"
-  },
-  {
-    question: "Who is the youngest?",
-    imgSrc: "assets/images/messi.jpg",
-    imgSrc1: "assets/images/ronaldo.jpg",
+    imgSrc: "assets/images/messi.webp",
+    imgSrc1: "assets/images/ronaldo.webp",
     option1: "Lionel Messi",
     option2: "Ronaldo",
     correct: "option1"
   },
   {
     question: "Who is the oldest?",
-    imgSrc: "assets/images/arnold_S.jpg",
-    imgSrc1: "assets/images/syl_S.jpg",
+    imgSrc: "assets/images/arnold_S.webp",
+    imgSrc1: "assets/images/syl_S.webp",
     option1: "Schwarzenegger",
     option2: "Sylv Stallone",
     correct: "option2"
   },
   {
     question: "Who is the youngest?",
-    imgSrc: "assets/images/messi.jpg",
-    imgSrc1: "assets/images/ronaldo.jpg",
+    imgSrc: "assets/images/messi.webp",
+    imgSrc1: "assets/images/ronaldo.webp",
+    option1: "Lionel Messi",
+    option2: "Ronaldo",
+    correct: "option1"
+  },
+  {
+    question: "Who is the oldest?",
+    imgSrc: "assets/images/arnold_S.webp",
+    imgSrc1: "assets/images/syl_S.webp",
+    option1: "Schwarzenegger",
+    option2: "Sylv Stallone",
+    correct: "option2"
+  },
+  {
+    question: "Who is the youngest?",
+    imgSrc: "assets/images/messi.webp",
+    imgSrc1: "assets/images/ronaldo.webp",
     option1: "Lionel Messi",
     option2: "Ronaldo",
     correct: "option1"
