@@ -12,13 +12,13 @@ const refreshButton = document.getElementById("refresh-button");
 //__________________________________Landing Page_______________________________________________//
 
 // Function for hiding some page content after being clicked. //
-const element = document.getElementById("begin");
-element.addEventListener("click", hidePage);
-let myTimeout = setTimeout(hidePage, 99000);
+const start = document.getElementById("begin");
+start.addEventListener("click", hidePage);
+setTimeout(hidePage, 99000);
 function hidePage() {
   document.getElementById("landingPage").style.display = "none";
-  rulesPage.style.display = "block";
-  gameTitle.style.display = "none";
+  document.getElementById("rulesPage").style.display = "block";
+  document.getElementById("gameTitle").style.display = "none";
 }
 
 //___________________________________Modal Rules Section_________________________________________//
@@ -26,17 +26,17 @@ function hidePage() {
 let modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-let btn = document.getElementById("rules");
+let getRules = document.getElementById("rules");
 
 // When the user clicks the button, open the modal 
-btn.onclick = function () {
+getRules.onclick = function () {
   modal.style.display = "block";
   document.getElementById("prize").innerHTML = "First person at the table with all question correct gets one free drink";
   document.getElementById("rule1").innerHTML = "No use of the internet";
   document.getElementById("rule2").innerHTML = "No looking at others answers";
   document.getElementById("message").innerHTML = "GOOD LUCK";
 };
-
+let exist = document.getElementById("exist");
 // When the user clicks on the close button it closes the rules
 exist.onclick = function () {
   modal.style.display = "none";
@@ -51,11 +51,7 @@ window.onclick = function (event) {
 
 //_____________________________________Questions___________________________________________________//
 // Questions for the quiz
-let question = document.getElementById("question");
-let qImg = document.getElementById("qImg");
-let qImg1 = document.getElementById("qImg1");
-let option1 = document.getElementById("option1");
-let option2 = document.getElementById("option2");
+
 let questions = [{
     question: "Who is the oldest?",
     imgSrc: "assets/images/tom_hanks.webp",
@@ -175,10 +171,9 @@ let questions = [{
 let playB = document.getElementById("play");
 playB.onclick = function () {
   modal.style.display = "none";
-  secondP.style.display = "none";
-  gameTitle.style.display = "none";
-  gameArea.style.display = "block";
-  //generateRandomQuestion();
+  document.getElementById("secondP").style.display = "none";
+  document.getElementById("gameTitle").style.display = "none";
+  document.getElementById("gameArea").style.display = "block";
   makeQuestion();
   makeTimer();
   renderProgress();
@@ -193,6 +188,11 @@ let count = 0;
 
 // Function to make questions
 function makeQuestion() {
+  let question = document.getElementById("question");
+  let qImg = document.getElementById("qImg");
+  let qImg1 = document.getElementById("qImg1");
+  let option1 = document.getElementById("option1");
+  let option2 = document.getElementById("option2");
   let ques = questions[currentQ];
   question.innerHTML = "<p>" + ques.question + "</p>";
   qImg.innerHTML = "<img src=" + ques.imgSrc + ">";
@@ -239,7 +239,7 @@ function checkAnswer(answer) {
     makeQuestion();
   } else {
     clearInterval(TIMER);
-    gameArea.style.display = "none";
+    document.getElementById("gameArea").style.display = "none";
     scoreRender();
   }
 }
@@ -284,16 +284,17 @@ function makeTimer() {
 //_____________________________________Result Section____________________________________________//
 // Calculate the amount of questions percent answered by the user
 const scoreDiv = document.getElementById("scoreContainer");
-const resultMessage = document.getElementById("resultMessage");
 
 // Function to display score results section
 function scoreRender() {
   scoreDiv.style.display = "block";
+  
     
     // Calculate the amount of question percent answered by the user
     const scorePer = Math.round(100 * score/questions.length);
-  gameArea.style.display = "none";
-  modalResults.style.display = "block";
+  document.getElementById("gameArea").style.display = "none";
+  document.getElementById("modalResults").style.display = "block";
+  
   scoreDiv.style.display = "block";
   scoreDiv.innerHTML += "<p>"+ scorePer +"%</p>";
 
@@ -313,11 +314,11 @@ function scoreRender() {
 
 //_____________________________________Modal Results_____________________________________________//
 // Get the modal
-let result = document.getElementById("modalResults");
+let replay = document.getElementById("replay");
 // Function for replaying the game
 replay.onclick = function () {
-  modalResults.style.display = "none";
-  gameArea.style.display = "block";
+  document.getElementById("modalResults").style.display = "none";
+  document.getElementById("gameArea").style.display = "block";
   progress.replaceChildren();
   scoreContainer.replaceChildren();
   scorePer = 0;
