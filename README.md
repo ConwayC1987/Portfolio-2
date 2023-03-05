@@ -45,8 +45,20 @@ Features used include: <details>
            <p>Designed by myself and added to make the website look a lot more professional.This will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open. The favicon was made at https://www.freelogodesign.org/</p>
          </details>
 
+Features used include: <details>
+           <summary>Favicon</summary>
+           ![Website Favicon](/readMe_images/madelogo.png "The favicon made for the website")    
+           <summary>The favicon design</summary>
+           <p>Designed by myself and added to make the website look a lot more professional.This will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open. The favicon was made at https://www.freelogodesign.org/</p>
+         </details>
 
-## Mobile and Desktop Design
+## Testing
+
+![Website Favicon](/readMe_images/1stPgLightH.jpg "The favicon made for the website") 
+![Website Favicon](/readMe_images/2rdpageLighthouse.jpg "The favicon made for the website") 
+
+![Website Favicon](/readMe_images/w3validatorReport.jpg "The favicon made for the website") 
+![Website Favicon](/readMe_images/w3vCSSreport.jpg "The favicon made for the website") 
 
 
 

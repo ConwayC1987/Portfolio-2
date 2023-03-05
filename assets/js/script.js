@@ -14,7 +14,7 @@ const refreshButton = document.getElementById("refresh-button");
 // Function for hiding some page content after being clicked. //
 const element = document.getElementById("begin");
 element.addEventListener("click", hidePage);
-const myTimeout = setTimeout(hidePage, 99000);
+let myTimeout = setTimeout(hidePage, 99000);
 function hidePage() {
   document.getElementById("landingPage").style.display = "none";
   rulesPage.style.display = "block";
@@ -28,10 +28,6 @@ let modal = document.getElementById("myModal");
 // Get the button that opens the modal
 let btn = document.getElementById("rules");
 
-// Get the button that closes the modal
-
-let existM = document.getElementById("exist");
-
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
   modal.style.display = "block";
@@ -39,19 +35,19 @@ btn.onclick = function () {
   document.getElementById("rule1").innerHTML = "No use of the internet";
   document.getElementById("rule2").innerHTML = "No looking at others answers";
   document.getElementById("message").innerHTML = "GOOD LUCK";
-}
+};
 
 // When the user clicks on the close button it closes the rules
 exist.onclick = function () {
   modal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
 
 //_____________________________________Questions___________________________________________________//
 // Questions for the quiz
@@ -187,14 +183,13 @@ playB.onclick = function () {
   makeTimer();
   renderProgress();
   TIMER = setInterval(makeTimer, 1000); // 1000ms = 1s
-}
+};
 
 //___________________________________Make Question Function______________________________________//
 // Some variables for the questions
 let lastQ = questions.length - 1;
 let currentQ = 0;
 let count = 0;
-//let randomNumber = currentQ;
 
 // Function to make questions
 function makeQuestion() {
@@ -243,30 +238,11 @@ function checkAnswer(answer) {
     currentQ++;
     makeQuestion();
   } else {
-    clearInterval(TIMER)
+    clearInterval(TIMER);
     gameArea.style.display = "none";
     scoreRender();
   }
 }
-
-//let myArray = [];
-
-//function generateRandomQuestion() {
-  //const randomNumber = Math.floor(Math.random() * questions.length);
-
-  //let hitDuplicate = 0;
-
-  //if (myArray.length == 0) {} else {
-  //  for (let i = 0; i < myArray.length; i++) {
-   //   if (randomNumber == myArray[i]) {
-   //     hitDuplicate = 1;
-  //    }
-   // }
-   // if (hitDuplicate == 1) {
-     // generateRandomQuestion();
-   // }
- // }
-//}
 
 //________________________________________Timer___________________________________________________//
 // Function to make a timer for the quiz
@@ -274,7 +250,7 @@ function makeTimer() {
   if (count <= qTime) {
     counter.innerHTML = count;
     timeGauge.style.width = count * timeUnit + "px";
-    count++
+    count++;
   } else {
     count = 0;
     // Change progress color to red
@@ -342,7 +318,6 @@ let result = document.getElementById("modalResults");
 replay.onclick = function () {
   modalResults.style.display = "none";
   gameArea.style.display = "block";
-  //generateRandomQuestion();
   progress.replaceChildren();
   scoreContainer.replaceChildren();
   scorePer = 0;
@@ -352,12 +327,12 @@ replay.onclick = function () {
   makeTimer();
   renderProgress();
   TIMER = setInterval(makeTimer, 1000); // 1000ms = 1s
-}
+};
 
 
 // Function for returning to homepage 
 const refreshPage = () => {
   location.reload();
-}
+};
 
-refreshButton.addEventListener('click', refreshPage)
+refreshButton.addEventListener('click', refreshPage);
