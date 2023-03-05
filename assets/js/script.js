@@ -15,6 +15,7 @@ const refreshButton = document.getElementById("refresh-button");
 const start = document.getElementById("begin");
 start.addEventListener("click", hidePage);
 setTimeout(hidePage, 99000);
+
 function hidePage() {
   document.getElementById("landingPage").style.display = "none";
   document.getElementById("rulesPage").style.display = "block";
@@ -31,9 +32,9 @@ let getRules = document.getElementById("rules");
 // When the user clicks the button, open the modal 
 getRules.onclick = function () {
   modal.style.display = "block";
-  document.getElementById("prize").innerHTML = "First person at the table with all question correct gets one free drink";
+  document.getElementById("prize").innerHTML = "First table with all the question correct gets one free each";
   document.getElementById("rule1").innerHTML = "No use of the internet";
-  document.getElementById("rule2").innerHTML = "No looking at others answers";
+  document.getElementById("rule2").innerHTML = "Click on the name to pick you answer";
   document.getElementById("message").innerHTML = "GOOD LUCK";
 };
 let exist = document.getElementById("exist");
@@ -176,7 +177,7 @@ playB.onclick = function () {
   document.getElementById("gameArea").style.display = "block";
   makeQuestion();
   makeTimer();
-  renderProgress();
+  showProgress();
   TIMER = setInterval(makeTimer, 1000); // 1000ms = 1s
 };
 
@@ -203,7 +204,7 @@ function makeQuestion() {
 
 //_____________________________________Progess Section__________________________________________//
 // Function to display area to let user know how many questions in the quiz
-function renderProgress() {
+function showProgress() {
   for (let quesIndex = 0; quesIndex <= lastQ; quesIndex++) {
     progress.innerHTML += "<div class='prog' id=" + quesIndex + "></div>";
   }
@@ -218,9 +219,6 @@ function ansCorrect() {
 function ansWrong() {
   document.getElementById(currentQ).style.backgroundColor = 'red';
 }
-
-//option1.addEventListener("click",checkAnswer('option1'));
-//option2.addEventListener("click",checkAnswer('option2'));
 
 //_____________________________________Check Answer______________________________________________//
 // Function to check if answer is correct
@@ -267,15 +265,15 @@ function makeTimer() {
 }
 // Function to make a timer flash red when the has a few seconds left
 // Code idea from http://jsfiddle.net/Dzk2h/2/
-(function() {
-    var s = document.getElementById('counter').style,
+(function () {
+  var s = document.getElementById('counter').style,
     f = false,
     c1 = 'red',
     c3 = 'white';
 
   setInterval(function () {
     s.backgroundColor = c3;
-    if (count >= 7 && count <=  10) {
+    if (count >= 7 && count <= 10) {
       s.backgroundColor = f ? c1 : c3;
       f = !f;
     }
@@ -288,28 +286,25 @@ const scoreDiv = document.getElementById("scoreContainer");
 // Function to display score results section
 function scoreRender() {
   scoreDiv.style.display = "block";
-  
-    
-    // Calculate the amount of question percent answered by the user
-    const scorePer = Math.round(100 * score/questions.length);
+
+
+  // Calculate the amount of question percent answered by the user
+  const scorePer = Math.round(100 * score / questions.length);
   document.getElementById("gameArea").style.display = "none";
   document.getElementById("modalResults").style.display = "block";
-  
-  scoreDiv.style.display = "block";
-  scoreDiv.innerHTML += "<p>"+ scorePer +"%</p>";
 
-  if(scorePer >= 100){  
-    document.getElementById("resultMessage").innerHTML = "You won free drinks for the table"; 
-    }  
-    else if(scorePer >= 80){  
-      document.getElementById("resultMessage").innerHTML = "Well done better luck next time";  
-    }  
-    else if(scorePer >= 60){  
-      document.getElementById("resultMessage").innerHTML = "You might of had enough";  
-    }  
-    else{  
-      document.getElementById("resultMessage").innerHTML = "Your drunk go home"; 
-    }  
+  scoreDiv.style.display = "block";
+  scoreDiv.innerHTML += "<p>" + scorePer + "%</p>";
+
+  if (scorePer >= 100) {
+    document.getElementById("resultMessage").innerHTML = "You won free drinks for the table";
+  } else if (scorePer >= 80) {
+    document.getElementById("resultMessage").innerHTML = "Well done better luck next time";
+  } else if (scorePer >= 60) {
+    document.getElementById("resultMessage").innerHTML = "You might of had enough";
+  } else {
+    document.getElementById("resultMessage").innerHTML = "Your drunk go home";
+  }
 }
 
 //_____________________________________Modal Results_____________________________________________//
@@ -326,7 +321,7 @@ replay.onclick = function () {
   score = 0;
   makeQuestion();
   makeTimer();
-  renderProgress();
+  showProgress();
   TIMER = setInterval(makeTimer, 1000); // 1000ms = 1s
 };
 
@@ -335,5 +330,15 @@ replay.onclick = function () {
 const refreshPage = () => {
   location.reload();
 };
-
 refreshButton.addEventListener('click', refreshPage);
+// Code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_hide_scroll
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}

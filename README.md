@@ -60,6 +60,8 @@ Features used include: <details>
 ![Website Favicon](/readMe_images/w3validatorReport.jpg "The favicon made for the website") 
 ![Website Favicon](/readMe_images/w3vCSSreport.jpg "The favicon made for the website") 
 
+![Website Favicon](/readMe_images/jshintReport.jpg "The favicon made for the website") 
+
 
 
 # What I would 
