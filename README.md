@@ -2,6 +2,8 @@
 
 The Guess Who Pub Quiz Game is a knowledge based quiz game that gives the users two choices and a question. The user has the option to read the rules of the game to better understand the game. The user is given an opportunity to play the quiz against a clock to select the correct answer providing the user with two images with the name of the person.
 
+The website live <a href="https://conwayc1987.github.io/Portfolio-2/" target="_blank">click here</a> for a look.
+
 - By Ciaran Conway 
   **February 22, 2023**
   
@@ -27,10 +29,6 @@ Phone design click here (created using https://www.figma.com/): <details>
            <summary>First Page and Game Area</summary>
            ![Landing page design layout](/readMe_images/firstWireframe.png "First page of the website")   
            ![Landing page design layout](/readMe_images/2rdpage.jpg "First page of the website")
-           <summary>Colors Used</summary>
-           <p>The color scheme I decided on was a dark background color a light shaded black and a bright vibrant blue color to stand out. As this is a single page game the background is constant for the entire website including for pop up modals.</p>
-           <summary>Images</summary>
-           <p>The images on this site are used were all made to be the same size and were got from Wikipedia.</p>
          </details>
 
 Desktop design: <details>
@@ -110,6 +108,21 @@ w3validator report for the website showing no errors.
 jsHint report for the website showing no warnings.
 ![jsHint report](/readMe_images/jshintReport.jpg "The jsHint report") 
 
+## Responsiveness
+
+All pages were tested to ensure responsiveness on screen sizes from 320px and above by using dev tools. This included opening the site in browser right clicking and selecting inspect. The screen was then dragged in and out to ensure reponsiveness was to 320px. All pages were fully responsive when tested and passed.
+
+| Test Number | Test                   | Result   
+| ----------- | ---------------------- | --------------------------------------------------------- |
+| `Test1`     | Click first button     | `Rules page opens`                                        |
+| `Test2`     | Click rules button     | `Rules modal opens`                                       |
+| `Test3`     | Click play button      | `Game starts`                                             |
+| `Test4`     | Click close button     | `Rules modal closes`                                      |
+| `Test5`     | Click home button      | `Open home page`                                          |
+| `Test6`     | Click option names     | `Option goes to check answer function, then next question`|
+| `Test7`     | Click try again button | `Game reloads and score reset`                            |
+| `Test8`     | Click home page button | `Returns to home page`                                    |
+
 # Features left to implement
 
 - Add a highest score tracker for each pub. 
@@ -121,6 +134,7 @@ jsHint report for the website showing no warnings.
 
 
 # Technology Used
+
 - Favicon.io
   - Was used for the website tab to make the website look more professional, favicon file was created at https://favicon.io/favicon-converter/.
 
@@ -142,7 +156,15 @@ jsHint report for the website showing no warnings.
 - Cloudconvert
  - https://cloudconvert.com/webp-converter was used to turn the images to webp.
 
+# Acknowledgements and Credits
 
+The love running video a lot of code from and the slides from the course were used. W3schools a lot of code ideas on how to make little things better. Mentor Gareth Mcgirr who helped with the project from the concept and troubleshooting he made the project a lot less stressful.
 
-Happy coding!
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+I found a few video's on youtube that were major factor in the project sucess.
+- https://www.youtube.com/watch?v=yJN5PLo3EZo for how to use images.
+- https://www.youtube.com/watch?v=49pYIMygIcU for the progess circles and time gauge.
+- Navbar home icon is from font awesome.
+- The zoom effect on the first two images is from the love running project.
+- The code to center the buttons is from w3schools.
+- The code to make the timer flash is from http://jsfiddle.net/Dzk2h/2/
+- The code for the modal pop up is from w3schools.
