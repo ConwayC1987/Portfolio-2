@@ -19,7 +19,7 @@ setTimeout(hidePage, 99000);
 function hidePage() {
   document.getElementById("landingPage").style.display = "none";
   document.getElementById("rulesPage").style.display = "block";
-  document.getElementById("gameTitle").style.display = "none";
+  //document.getElementById("gameTitle").style.display = "none";
 }
 
 //___________________________________Modal Rules Section_________________________________________//
