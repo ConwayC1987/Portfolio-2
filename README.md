@@ -132,6 +132,11 @@ All pages were tested to ensure responsiveness on screen sizes from 320px and ab
 - Track leaderboard's of all pubs to have a top 15 scores tables quiz, with a big price.
 - Have an update question array every week and then used them for a get random question when enough question is put into the array. 
 
+# Bugs and Unfixed Bugs
+
+## Fixed
+
+## Unfixed
 
 # Technology Used
 
@@ -156,6 +161,12 @@ All pages were tested to ensure responsiveness on screen sizes from 320px and ab
 - Cloudconvert
  - https://cloudconvert.com/webp-converter was used to turn the images to webp.
 
+ # Deployment
+
+## Version Control
+
+## Deployment to Github Pages
+
 # Acknowledgements and Credits
 
 The love running video a lot of code from and the slides from the course were used. W3schools a lot of code ideas on how to make little things better. Mentor Gareth Mcgirr who helped with the project from the concept and troubleshooting he made the project a lot less stressful.
@@ -168,3 +179,6 @@ I found a few video's on youtube that were major factor in the project sucess.
 - The code to center the buttons is from w3schools.
 - The code to make the timer flash is from http://jsfiddle.net/Dzk2h/2/
 - The code for the modal pop up is from w3schools.
+
+
+
