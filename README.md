@@ -24,6 +24,8 @@ Read more : <details>
            <summary>Images</summary>
            <p>The images on this site are used were all made to be the same size and were got from Wikipedia.</p>
          </details>
+
+- - - -
 # Wireframes
 Phone design click here (created using https://www.figma.com/): <details>
            <summary>First Page and Game Area</summary>
@@ -33,10 +35,11 @@ Phone design click here (created using https://www.figma.com/): <details>
 
 Desktop design: <details>
            <summary>First Page and Game Area</summary>
-           ![Landing page design layout](/readMe_images/desktopDesign.png "First page of the website")   
-           ![Game page design layout](/readMe_images/gamePlayDesktopDesign.png "Game page of the website")
+           ![Landing page design layout](readMe_images/desktopDesign.png "First page of the website")   
+           ![Game page design layout](readMe_images/gamePlayDesktopDesign.png "Game page of the website")
          </details>
 
+- - - -
 # User Stories
 
 - As a user I want to be able to play a fun game.
@@ -44,6 +47,7 @@ Desktop design: <details>
 - As a user I want to get a score from the quiz to mark my progress. 
 - As a user I want to play again when I complete the quiz
 
+- - - -
 # Features
 Features used include: <details>
            <summary>Favicon</summary>
@@ -89,23 +93,29 @@ The footer: <details>
            <p>The footer is a simple design and centered on the screen. I choose a github icon from https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-github. The icon is a link to my github repositories for any user that might be interested in future projects.</p>    
          </details>
 
+- - - -
 # Testing
-Lighthouse report for the home page showing all high results.
+## Lighthouse report for the home page showing all high results.
+
 ![Lighthouse Report](/readMe_images/1stPgLightH.jpg "The website first page lighthouse report")
 
-Lighthouse report for the rules page showing all high results.
+## Lighthouse report for the rules page showing all high results.
+
 ![Lighthouse Report](/readMe_images/2rdpageLighthouse.jpg "The website second page lighthouse report")
 
-Lighthouse report for the game area showing all high results.
+## Lighthouse report for the game area showing all high results.
+
 ![Lighthouse Report](/readMe_images/gameTimeLighthouse.jpg "The website game area lighthouse report") 
 
-w3validator report for the website showing no errors.
+## w3validator report for the website showing no errors.
 ![W3Validator report](/readMe_images/w3validatorReport.jpg "The w3validator html report")
 
-w3validator report for the website showing no errors.
+## w3validator report for the website showing no errors.
+
 ![jigsawReport](/readMe_images/w3vCSSreport.jpg "The jigsaw css report") 
 
-jsHint report for the website showing no warnings.
+## jsHint report for the website showing no warnings.
+
 ![jsHint report](/readMe_images/jshintReport.jpg "The jsHint report") 
 
 ## Responsiveness
@@ -123,6 +133,7 @@ All pages were tested to ensure responsiveness on screen sizes from 320px and ab
 | `Test7`     | Click try again button | `Game reloads and score reset`                            |
 | `Test8`     | Click home page button | `Returns to home page`                                    |
 
+- - - -
 # Features left to implement
 
 - Add a highest score tracker for each pub. 
@@ -132,12 +143,15 @@ All pages were tested to ensure responsiveness on screen sizes from 320px and ab
 - Track leaderboard's of all pubs to have a top 15 scores tables quiz, with a big price.
 - Have an update question array every week and then used them for a get random question when enough question is put into the array. 
 
+- - - -
 # Bugs and Unfixed Bugs
 
 ## Fixed
-
+Two images would not show on the README because a / was used in front of the image directory. 
 ## Unfixed
+No unfixed bugs.
 
+- - - -
 # Technology Used
 
 - Favicon.io
@@ -161,12 +175,24 @@ All pages were tested to ensure responsiveness on screen sizes from 320px and ab
 - Cloudconvert
  - https://cloudconvert.com/webp-converter was used to turn the images to webp.
 
+- - - -
  # Deployment
 
-## Version Control
+ ## Version Control
+
+ The site was created using the Visual Studio code editor using gitpod and pushed to github. The following git commands were used throughout development to push code.
+ - git add - This command was used to add the file(s) to the staging area before they are committed.
+ - git commit -m “commit message” - This command was used to commit changes to the github with a message.
+ - git push - This command was used to push all committed code to github.
 
 ## Deployment to Github Pages
 
+The steps to deploy are as follows:
+- In the GitHub repository, navigate to the Settings tab.
+- From the source section drop-down menu, select the Master Branch.
+- Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+- - - -
 # Acknowledgements and Credits
 
 The love running video a lot of code from and the slides from the course were used. W3schools a lot of code ideas on how to make little things better. Mentor Gareth Mcgirr who helped with the project from the concept and troubleshooting he made the project a lot less stressful.
@@ -179,6 +205,9 @@ I found a few video's on youtube that were major factor in the project sucess.
 - The code to center the buttons is from w3schools.
 - The code to make the timer flash is from http://jsfiddle.net/Dzk2h/2/
 - The code for the modal pop up is from w3schools.
+- Lots of little bits of code from w3schools for styling and how to do stuff.
 
-
-
+## Images used
+- Image on the first page was taken from
+- Image on the second page was taken from
+- All the images for the questions were taken from https://www.wikipedia.org/
