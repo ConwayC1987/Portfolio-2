@@ -486,12 +486,12 @@ button {
   text-align: center;
   font-weight: bolder;
 }
-
+/* Results button styling */
 #results #play:hover {
   background-color: whitesmoke;
   color: #3b51ab;
 }
-
+/* Results exist button styling */
 #results #exist {
   background-color: #3b51ab;
   color: white;
@@ -508,6 +508,17 @@ button {
   background-color: whitesmoke;
   color: #3b51ab;
 }
+/* Footer styling */
+#githubIcon {
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
+  /* Height of the footer*/
+  height: 40px;
+  background: rgba(59, 59, 57, 0);
+  margin-bottom: 1%;
+}
+
 
 /* ______________________________________Media Queries_____________________________________________*/
 
@@ -566,6 +577,9 @@ button {
 @media (max-width: 415px) {
   #counter {
     margin-left: 135px;
+  }
+  #rules {
+    padding: 5%;
   }
 
   .option-left {
@@ -768,6 +782,10 @@ button {
   }
 
   #landingPage #begin {
+    font-size: medium;
+  }
+
+  #rulesPage #rules {
     font-size: medium;
   }
 

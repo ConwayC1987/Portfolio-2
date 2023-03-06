@@ -174,6 +174,7 @@ let playB = document.getElementById("play");
 playB.onclick = function () {
   modal.style.display = "none";
   document.getElementById("secondP").style.display = "none";
+  document.getElementById("githubIcon").style.display = "none";
   document.getElementById("gameTitle").style.display = "none";
   document.getElementById("gameArea").style.display = "block";
   makeQuestion();
@@ -197,8 +198,8 @@ function makeQuestion() {
   let option2 = document.getElementById("option2");
   let ques = questions[currentQ];
   question.innerHTML = "<p>" + ques.question + "</p>";
-  qImg.innerHTML = "<img src=" + ques.imgSrc + ">";
-  qImg1.innerHTML = "<img src=" + ques.imgSrc1 + ">";
+  qImg.innerHTML = "<img src=" + ques.imgSrc + " alt=" + option1 +">";
+  qImg1.innerHTML = "<img src=" + ques.imgSrc1 + " alt=" + option2 +">";
   option1.innerHTML = ques.option1;
   option2.innerHTML = ques.option2;
 }
@@ -287,13 +288,10 @@ const scoreDiv = document.getElementById("scoreContainer");
 // Function to display score results section
 function scoreRender() {
   scoreDiv.style.display = "block";
-
-
   // Calculate the amount of question percent answered by the user
   const scorePer = Math.round(100 * score / questions.length);
   document.getElementById("gameArea").style.display = "none";
   document.getElementById("modalResults").style.display = "block";
-
   scoreDiv.style.display = "block";
   scoreDiv.innerHTML += "<p>" + scorePer + "%</p>";
 
