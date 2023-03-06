@@ -10,7 +10,7 @@ The Guess Who Pub Quiz Game is a knowledge based quiz game that gives the users 
 
 For `Project-2` it was decided to create a quiz game that I would like to play myself. I also wanted to design something the could be marketed to a user (Pub owners) so I decided to make a simple and fun pub quiz game that rewards the user. Rather than just making a normal quiz site I wanted to add some extra aspects that I felt would make the quiz more fun and appealing to the users. I decided that because it was a pub quiz the questions would have to be simple questions for the user as alcohol might of been consumed. 
 
-Game Design : <details>
+Read more : <details>
            <summary>The Game</summary>
            <p>It was decided that I would use two options for the answers giving the user a 50/50 chance of getting it right making it more fun. 65% of people's brain work visually meaning they find it easier seeing images so it was decided that each question how have an image associated with it. The questions I decided to select involve sports, Irish politics and famous celebrities actors. I also wanted to add a countdown timer to create urgency also a way for the user to know how many questions left and how many they got correct.</p>
            <p>The font style that I decided to use was from google fonts Oswald and sans-serif were used.</p>
@@ -20,7 +20,7 @@ Game Design : <details>
            <p>The images on this site are used were all made to be the same size and were got from Wikipedia.</p>
          </details>
 # Wireframes
-Phone design (created using https://www.figma.com/): <details>
+Phone design click here (created using https://www.figma.com/): <details>
            <summary>First Page and Game Area</summary>
            ![Landing page design layout](/readMe_images/firstWireframe.png "First page of the website")   
            ![Landing page design layout](/readMe_images/2rdpage.jpg "First page of the website")
@@ -32,10 +32,10 @@ Phone design (created using https://www.figma.com/): <details>
 
 # User Stories
 
-As a user I want to be able to play a fun game.
-As a user I want to be able to see the rules for the quiz before I start
-As a user I want to get a score from the quiz to mark my progress 
-As a user I want to play again when I complete the quiz
+- As a user I want to be able to play a fun game.
+- As a user I want to be able to see the rules for the quiz before I start.
+- As a user I want to get a score from the quiz to mark my progress. 
+- As a user I want to play again when I complete the quiz
 
 # Features
 Features used include: <details>
@@ -45,22 +45,31 @@ Features used include: <details>
            <p>Designed by myself and added to make the website look a lot more professional.This will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open. The favicon was made at https://www.freelogodesign.org/</p>
          </details>
 
-Features used include: <details>
-           <summary>Favicon</summary>
-           ![Website Favicon](/readMe_images/madelogo.png "The favicon made for the website")    
-           <summary>The favicon design</summary>
-           <p>Designed by myself and added to make the website look a lot more professional.This will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open. The favicon was made at https://www.freelogodesign.org/</p>
+Header       <details>
+           <summary>Navbar</summary>
+           ![Website Navbar](/readMe_images/navbar.jpg "The website's navbar")    
+           <summary>The navbar design</summary>
+           <p>Navbar was kept very simple as it was only an one page website. A small home icon button was used so the user would always have a way of getting back to the home page</p>
          </details>
 
 ## Testing
+Lighthouse report for the home page.
+![Lighthouse Report](/readMe_images/1stPgLightH.jpg "The website first page lighthouse report")
 
-![Website Favicon](/readMe_images/1stPgLightH.jpg "The favicon made for the website") 
-![Website Favicon](/readMe_images/2rdpageLighthouse.jpg "The favicon made for the website") 
+Lighthouse report for the rules page.
+![Lighthouse Report](/readMe_images/2rdpageLighthouse.jpg "The website second page lighthouse report")
 
-![Website Favicon](/readMe_images/w3validatorReport.jpg "The favicon made for the website") 
-![Website Favicon](/readMe_images/w3vCSSreport.jpg "The favicon made for the website") 
+Lighthouse report for the game area.
+![Lighthouse Report](/readMe_images/gameTimeLighthouse.jpg "The website game area lighthouse report") 
 
-![Website Favicon](/readMe_images/jshintReport.jpg "The favicon made for the website") 
+w3validator report for the website showing no errors.
+![W3Validator report](/readMe_images/w3validatorReport.jpg "The w3validator html report")
+
+w3validator report for the website showing no errors.
+![jigsawReport](/readMe_images/w3vCSSreport.jpg "The jigsaw css report") 
+
+jsHint report for the website showing no warnings.
+![jsHint report](/readMe_images/jshintReport.jpg "The jsHint report") 
 
 
 
