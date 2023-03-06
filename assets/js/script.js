@@ -20,11 +20,11 @@ setTimeout(hidePage, 99000);
 function hidePage() {
   document.getElementById("landingPage").style.display = "none";
   document.getElementById("rulesPage").style.display = "block";
-  //document.getElementById("gameTitle").style.display = "none";
 }
 
 //___________________________________Modal Rules Section_________________________________________//
 // Get the modal
+// Code idea from w3schools
 let modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
@@ -206,6 +206,7 @@ function makeQuestion() {
 
 //_____________________________________Progess Section__________________________________________//
 // Function to display area to let user know how many questions in the quiz
+// Code idea from https://www.youtube.com/watch?v=49pYIMygIcU
 function showProgress() {
   for (let quesIndex = 0; quesIndex <= lastQ; quesIndex++) {
     progress.innerHTML += "<div class='prog' id=" + quesIndex + "></div>";
@@ -249,6 +250,7 @@ function checkAnswer(answer) {
 function makeTimer() {
   if (count <= qTime) {
     counter.innerHTML = count;
+    // Code idea from https://www.youtube.com/watch?v=49pYIMygIcU
     timeGauge.style.width = count * timeUnit + "px";
     count++;
   } else {
