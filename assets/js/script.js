@@ -9,6 +9,7 @@ const counter = document.getElementById("counter");
 const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
 const refreshButton = document.getElementById("refresh-button");
+const refreshButton1 = document.getElementById("refresh-button1");
 //__________________________________Landing Page_______________________________________________//
 
 // Function for hiding some page content after being clicked. //
@@ -331,6 +332,8 @@ const refreshPage = () => {
   location.reload();
 };
 refreshButton.addEventListener('click', refreshPage);
+refreshButton1.addEventListener('click', refreshPage);
+
 // Code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_hide_scroll
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
