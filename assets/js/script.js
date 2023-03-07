@@ -33,7 +33,7 @@ let getRules = document.getElementById("rules");
 // When the user clicks the button, open the modal 
 getRules.onclick = function () {
   modal.style.display = "block";
-  document.getElementById("prize").innerHTML = "First table with all the question correct gets one free each";
+  document.getElementById("prize").innerHTML = "First table with all the question correct gets one free drink each";
   document.getElementById("rule1").innerHTML = "No use of the internet";
   document.getElementById("rule2").innerHTML = "Click on the name to pick you answer";
   document.getElementById("message").innerHTML = "GOOD LUCK";
@@ -325,7 +325,6 @@ replay.onclick = function () {
   showProgress();
   TIMER = setInterval(makeTimer, 1000); // 1000ms = 1s
 };
-
 
 // Function for returning to homepage 
 const refreshPage = () => {
