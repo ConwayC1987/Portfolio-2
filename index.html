@@ -20,7 +20,9 @@
 <!-- Body of page -->
 <body>
     <header>
+        <!-- Navbar -->
         <div id="navbar">
+            <!-- The home button from font awesome -->
             <button aria-label="home page" id="refresh-button"><i class="fa fa-home" aria-hidden="true"></i></button>           
         </div>
         <!-- Title of the game -->
@@ -53,7 +55,7 @@
                     <div class="modal-header">
                         <div id="prize"></div>
                     </div>
-                    <!-- Modal content -->
+                    <!-- Game rules -->
                     <div class="modal-body">
                         <div id="rule1"></div>
                         <div id="rule2"></div>
@@ -62,6 +64,7 @@
                         <div id="message"></div>
                         <!-- The play button to start the game  -->
                         <button id="play">Play</button>
+                        <!-- The exist modal button  -->
                         <button id="exist">Close</button>
                     </div>
                 </div>
@@ -111,7 +114,7 @@
         </div>
         <!-- Results content -->
         <div id="results" >          
-            <!-- The Modal -->
+            <!-- The Modal idea is from w3schools -->
             <div id="modalResults" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content">
@@ -119,18 +122,22 @@
                         <div>Results</div>
                     </div>
                     <div class="modal-body">
+                        <!-- Tells the user's score in %  -->
                         <div id="scoreContainer"></div>
+                        <!-- The result message -->
                         <div id="resultMessage"></div>
                     </div>
                     <div class="modal-footer">
-                        <!-- The play button to start the game  -->
+                        <!-- The replay button to start the game  -->
                         <button id="replay">Try Again</button>
+                        <!-- The home page button  -->
                         <button id="refresh-button1">Home Page</button>
                     </div>
                 </div>
             </div>              
         </div>     
     </main>
+    <!-- The footer with a github icon  -->
     <footer id ="githubIcon"><a target="_blank" href="https://github.com/ConwayC1987"><i class="fa fa-github" alt="github link" style="font-size:40px;color:whitesmoke"></i></a></footer>
     <script src="assets/js/script.js"></script>
 </body>

@@ -16,7 +16,7 @@ For the website design I felt like I could manipulate the DOM to create a single
 
 Read more : <details>
            <summary>The Game</summary>
-           <p>It was decided that I would use two options for the answers giving the user a 50/50 chance of getting it right making it more fun. 65% of people's brain work visually meaning they find it easier seeing images so it was decided that each question how have an image associated with it. The questions I decided to select involve sports, Irish politics and famous celebrities actors. I also wanted to add a countdown timer to create urgency also a way for the user to know how many questions left and how many they got correct.</p>
+           <p>It was decided that I would use two options for the answers giving the user a 50/50 chance of getting it right making it more fun. 65% of people's brain work visually meaning they find it easier seeing images so it was decided that each question how have an image associated with it. The questions I decided to select involve sports, Irish politics and famous celebrities actors. I also wanted to add a countdown timer to create urgency also a way for the user to know how many questions left and how many they got correct. It was decided early that it was important to make the quiz suitable that it would fit on a phone screen without the need to have to scroll down to read a question in the quiz.</p>
            <summary>Font style</summary>
            <p>The font style that I decided to use was from google fonts Oswald and sans-serif were used.</p>
            <summary>Colors Used</summary>
@@ -147,7 +147,9 @@ All pages were tested to ensure responsiveness on screen sizes from 320px and ab
 # Bugs and Unfixed Bugs
 
 ## Fixed
-Two images would not show on the README because a / was used in front of the image directory. 
+- Two images would not show on the README because a / was used in front of the image directory.
+- Making the 404 page the home button would not so I change the link to a href instead.
+- Many issues with the phone screen but all were fixed with media queries. 
 ## Unfixed
 No unfixed bugs.
 
@@ -209,5 +211,5 @@ I found a few video's on youtube that were major factor in the project sucess.
 
 ## Images used
 - Image on the first page was taken from
-- Image on the second page was taken from
+- Image on the second page was taken from https://www.on3.com/teams/kentucky-wildcats/news/kroger-field-alcohol-prohibition-kentucky-football-fans-luxury-suites-beer-bourbon/
 - All the images for the questions were taken from https://www.wikipedia.org/
