@@ -2,6 +2,8 @@
 
 The Guess Who Pub Quiz Game is a knowledge based quiz game that gives the users two choices and a question. The user has the option to read the rules of the game to better understand the game. The user is given an opportunity to play the quiz against a clock to select the correct answer providing the user with two images with the name of the person.
 
+The idea was to keep the questions simple with only two options for the answers to give an element of chance to the game and make the game more fun for the user. The game could be marketed for the pub industry for a quiz night with prizes for the customers to bring in more business on quiet nights.
+
 The website live <a href="https://conwayc1987.github.io/Portfolio-2/" target="_blank">click here</a> for a look.
 
 - By Ciaran Conway 
@@ -29,14 +31,12 @@ Read more : <details>
 # Wireframes
 Phone design click here (created using https://www.figma.com/): <details>
            <summary>First Page and Game Area</summary>
-           ![Landing page design layout](/readMe_images/firstWireframe.png "First page of the website")   
-           ![Landing page design layout](/readMe_images/2rdpage.jpg "First page of the website")
+           ![Landing page design layout](/readMe_images/firstWireframe.png "First page of the website")    ![Landing page design layout](/readMe_images/2rdpage.jpg "First page of the website")
          </details>
 
 Desktop design: <details>
            <summary>First Page and Game Area</summary>
-           ![Landing page design layout](readMe_images/desktopDesign.png "First page of the website")   
-           ![Game page design layout](readMe_images/gamePlayDesktopDesign.png "Game page of the website")
+           ![Landing page design layout](readMe_images/desktopDesign.png "First page of the website")      ![Game page design layout](readMe_images/gamePlayDesktopDesign.png "Game page of the website")
          </details>
 
 - - - -
@@ -53,7 +53,7 @@ Features used include: <details>
            <summary>Favicon</summary>
            ![Website Favicon](/readMe_images/madelogo.png "The favicon made for the website")    
            <summary>The favicon design</summary>
-           <p>Designed by myself and added to make the website look a lot more professional.This will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open. The favicon was made at https://www.freelogodesign.org/</p>
+           <p>Designed by myself and added to make the website look a lot more professional. This will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open. The favicon was made at https://www.freelogodesign.org/</p>
          </details>
 
 Header: <details>
@@ -103,11 +103,12 @@ The footer: <details>
 
 ![Lighthouse Report](/readMe_images/2rdpageLighthouse.jpg "The website second page lighthouse report")
 
-## Lighthouse report for the game area showing all high results.
+## Lighthouse report for the game area showing all high results. I needed to use lighthouse snapshot due to game loading to the first page when I start a lighthouse report.
 
 ![Lighthouse Report](/readMe_images/gameTimeLighthouse.jpg "The website game area lighthouse report") 
 
 ## w3validator report for the website showing no errors.
+
 ![W3Validator report](/readMe_images/w3validatorReport.jpg "The w3validator html report")
 
 ## w3validator report for the website showing no errors.
@@ -132,6 +133,9 @@ All pages were tested to ensure responsiveness on screen sizes from 320px and ab
 | `Test6`     | Click option names     | `Option goes to check answer function, then next question`|
 | `Test7`     | Click try again button | `Game reloads and score reset`                            |
 | `Test8`     | Click home page button | `Returns to home page`                                    |
+| `Test9`     | Timer runs             | `Next question shows question marked incorrect`           |
+| `Test10`    | Timer runs last Q      | `Game finishes results show`                              |
+| `Test11`    | Timer get to 7 seconds | `Clock flashes red until clock resets`                    |
 
 - - - -
 # Features left to implement
@@ -149,7 +153,7 @@ All pages were tested to ensure responsiveness on screen sizes from 320px and ab
 ## Fixed
 - Two images would not show on the README because a / was used in front of the image directory.
 - Making the 404 page the home button would not so I change the link to a href instead.
-- Many issues with the phone screen but all were fixed with media queries. 
+- Many issues when I switched the phone screen size but all were fixed with media queries. 
 ## Unfixed
 No unfixed bugs.
 
