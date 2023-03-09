@@ -90,13 +90,13 @@ The results modal: <details>
 The footer: <details>
            <summary>Footer</summary>
            ![Website results area](/readMe_images/footer.jpg "The game result modal")
-           <p>The footer is a simple design and centered on the screen. I choose a github icon from https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-github. The icon is a link to my github repositories for any user that might be interested in future projects.</p>    
+           <p>The footer is a simple design and centered on the screen. I choose a github icon from https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-github. The icon is a link to my github repositories for any user that might be interested in future projects. The github icon is designed to hide itself when the game starts, this was done because in testing the game on a phone I found the icon can be clicked by accident also to improve user experience.</p>    
          </details>
 
 The error 404 page: <details>
            <summary>404 Page</summary>
            ![The error 404 page](/readMe_images/404readME.png "The website 404 page")
-           <p>The 404 page was put in as an extra feature, the idea is to keep the user on the website rather than having to click back. This was done to improve the user experience and make the website look more  professional.</p>    
+           <p>The 404 page was put in as an extra feature, the idea is to keep the user on the website rather than having to click back. This was done to improve the user experience and make the website look more professional.</p>    
          </details>
 
 - - - -
