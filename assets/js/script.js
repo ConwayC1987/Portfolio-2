@@ -2,9 +2,9 @@
 // Variables //
 const qTime = 10; // 10s
 const timeLeft = 150; // 150px
-const timeUnit = timeLeft / qTime;
-let TIMER = "";
-let score = 0;
+const timeUnit = timeLeft / qTime; // Makes the time gague
+let TIMER = ""; // Timer
+let score = 0; // Score
 const counter = document.getElementById("counter");
 const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
@@ -15,7 +15,7 @@ const refreshButton1 = document.getElementById("refresh-button1");
 // Function for hiding some page content after being clicked. //
 const start = document.getElementById("begin");
 start.addEventListener("click", hidePage);
-setTimeout(hidePage, 99000);
+setTimeout(hidePage, 99000); // Home page will change after 99 seconds 
 
 function hidePage() {
   document.getElementById("landingPage").style.display = "none";
@@ -300,11 +300,11 @@ function scoreRender() {
   if (scorePer >= 100) {
     document.getElementById("resultMessage").innerHTML = "You won free drinks for the table";
   } else if (scorePer >= 80) {
-    document.getElementById("resultMessage").innerHTML = "Well done better luck next time";
+    document.getElementById("resultMessage").innerHTML = "Well done but better luck next time";
   } else if (scorePer >= 60) {
     document.getElementById("resultMessage").innerHTML = "You might of had enough";
   } else {
-    document.getElementById("resultMessage").innerHTML = "Your drunk go home";
+    document.getElementById("resultMessage").innerHTML = "You are drunk go home";
   }
 }
 
